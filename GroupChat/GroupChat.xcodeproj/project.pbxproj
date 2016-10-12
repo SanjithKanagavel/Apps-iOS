@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53F042F1DAE8B6100B05E25 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C53F042D1DAE8B6100B05E25 /* Model.xcdatamodeld */; };
 		C5F34C5A1DACCF20003B5904 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C591DACCF20003B5904 /* main.m */; };
 		C5F34C5D1DACCF20003B5904 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C5C1DACCF20003B5904 /* AppDelegate.m */; };
 		C5F34C601DACCF20003B5904 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C5F1DACCF20003B5904 /* MasterViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C53F042E1DAE8B6100B05E25 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C5F34C551DACCF20003B5904 /* GroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F34C591DACCF20003B5904 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5F34C5B1DACCF20003B5904 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				C5F34C691DACCF20003B5904 /* LaunchScreen.storyboard */,
 				C5F34C6C1DACCF20003B5904 /* Info.plist */,
 				C5F34C581DACCF20003B5904 /* Supporting Files */,
+				C53F042D1DAE8B6100B05E25 /* Model.xcdatamodeld */,
 			);
 			name = GroupChat;
 			path = ToDoList;
@@ -157,6 +160,7 @@
 			files = (
 				C5F34C5D1DACCF20003B5904 /* AppDelegate.m in Sources */,
 				C5F34C601DACCF20003B5904 /* MasterViewController.m in Sources */,
+				C53F042F1DAE8B6100B05E25 /* Model.xcdatamodeld in Sources */,
 				C5F34C5A1DACCF20003B5904 /* main.m in Sources */,
 				C5F34C631DACCF20003B5904 /* DetailViewController.m in Sources */,
 			);
@@ -309,8 +313,22 @@
 				C5F34C711DACCF20003B5904 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C53F042D1DAE8B6100B05E25 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C53F042E1DAE8B6100B05E25 /* Model.xcdatamodel */,
+			);
+			currentVersion = C53F042E1DAE8B6100B05E25 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C5F34C4D1DACCF20003B5904 /* Project object */;
 }

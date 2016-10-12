@@ -105,33 +105,6 @@
     }*/
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(alertView.tag == 1)
-    {
-        if(buttonIndex == 1) //for ok
-        {
-            NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext]; //Data base object
-            NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity]; //Table object
-            NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-            
-            [newManagedObject setValue:[alertView textFieldAtIndex:0].text forKey:@"message"];
-            
-            // Save the context.
-            NSError *error = nil;
-            if (![context save:&error]) {
-                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-                abort();
-            }
-        }
-        else if(buttonIndex ==0) //for cancel
-        {
-            
-        }
-    }
-}
-
-
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
