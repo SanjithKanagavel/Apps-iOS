@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5AF6E5644CDE5E1168D1BC7E /* libPods-GroupChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0617A51DD4ECFD653B6A65A4 /* libPods-GroupChat.a */; };
 		C53F042F1DAE8B6100B05E25 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C53F042D1DAE8B6100B05E25 /* Model.xcdatamodeld */; };
+		C53F045A1DAEB17500B05E25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C53F04591DAEB17500B05E25 /* GoogleService-Info.plist */; };
 		C5F34C5A1DACCF20003B5904 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C591DACCF20003B5904 /* main.m */; };
 		C5F34C5D1DACCF20003B5904 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C5C1DACCF20003B5904 /* AppDelegate.m */; };
 		C5F34C601DACCF20003B5904 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C5F1DACCF20003B5904 /* MasterViewController.m */; };
@@ -22,6 +23,7 @@
 		0617A51DD4ECFD653B6A65A4 /* libPods-GroupChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroupChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6243398826348452EE19C054 /* Pods-GroupChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupChat/Pods-GroupChat.release.xcconfig"; sourceTree = "<group>"; };
 		C53F042E1DAE8B6100B05E25 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C53F04591DAEB17500B05E25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5F34C551DACCF20003B5904 /* GroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F34C591DACCF20003B5904 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5F34C5B1DACCF20003B5904 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		C5F34C4C1DACCF20003B5904 = {
 			isa = PBXGroup;
 			children = (
+				C53F04591DAEB17500B05E25 /* GoogleService-Info.plist */,
 				C5F34C571DACCF20003B5904 /* GroupChat */,
 				C5F34C561DACCF20003B5904 /* Products */,
 				37ADD246604493F3856526D5 /* Pods */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F34C6B1DACCF20003B5904 /* LaunchScreen.storyboard in Resources */,
+				C53F045A1DAEB17500B05E25 /* GoogleService-Info.plist in Resources */,
 				C5F34C681DACCF20003B5904 /* Assets.xcassets in Resources */,
 				C5F34C661DACCF20003B5904 /* Main.storyboard in Resources */,
 			);

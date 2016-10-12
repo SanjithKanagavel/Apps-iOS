@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "MasterViewController.h"
+@import Firebase;
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -32,6 +33,8 @@
     UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
     MasterViewController *mvc = (MasterViewController *)masterNavigationController.topViewController;
     mvc.managedObjectContext = self.moc;
+    
+    [FIRApp configure];
     return YES;
 }
 

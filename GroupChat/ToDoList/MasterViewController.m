@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+@import FirebaseDatabase;
 
 @interface MasterViewController ()
 
@@ -23,6 +24,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.fdr = [[FIRDatabase database] reference];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,6 +69,7 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+        [self postMessagesToFirebase:descriptionTxt.text];
         
     }]];
     
@@ -97,6 +100,11 @@
      NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
      abort();
      }*/
+}
+
+-(void)postMessagesToFirebase:(NSString *) str {
+    
+    [[self.fdr child:@"GroupChats"] setValue:str forKey:@"chat"];
 }
 
 #pragma mark - Segues
