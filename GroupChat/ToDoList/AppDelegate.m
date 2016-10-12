@@ -31,7 +31,7 @@
     
     UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
     MasterViewController *mvc = (MasterViewController *)masterNavigationController.topViewController;
-    mvc.moc = self.moc;
+    mvc.managedObjectContext = self.moc;
     return YES;
 }
 
@@ -94,7 +94,7 @@
     if(_mom != nil) {
         return _mom;
     }
-    NSURL *modelUrl = [[NSBundle mainBundle]URLForResource:@"File" withExtension:@"momd"];
+    NSURL *modelUrl = [[NSBundle mainBundle]URLForResource:@"Model" withExtension:@"momd"];
     _mom  = [[NSManagedObjectModel alloc]initWithContentsOfURL:modelUrl];
     return _mom;
 }
@@ -110,8 +110,8 @@
             return _psc;
         }
     
-    _psc = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:_mom];
-    NSURL *storeURL = [[self applicationDocumentsDirectory]URLByAppendingPathComponent:@"File.sqlite"];
+    _psc = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self mom]];
+    NSURL *storeURL = [[self applicationDocumentsDirectory]URLByAppendingPathComponent:@"Model.sqlite"];
     NSError *error;
     NSString *errorDesc = @"Problem in connecting the data %@ %@";
     if(![_psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])

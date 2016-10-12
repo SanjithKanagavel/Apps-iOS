@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AF6E5644CDE5E1168D1BC7E /* libPods-GroupChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0617A51DD4ECFD653B6A65A4 /* libPods-GroupChat.a */; };
 		C53F042F1DAE8B6100B05E25 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C53F042D1DAE8B6100B05E25 /* Model.xcdatamodeld */; };
 		C5F34C5A1DACCF20003B5904 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C591DACCF20003B5904 /* main.m */; };
 		C5F34C5D1DACCF20003B5904 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F34C5C1DACCF20003B5904 /* AppDelegate.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0617A51DD4ECFD653B6A65A4 /* libPods-GroupChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroupChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6243398826348452EE19C054 /* Pods-GroupChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupChat/Pods-GroupChat.release.xcconfig"; sourceTree = "<group>"; };
 		C53F042E1DAE8B6100B05E25 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C5F34C551DACCF20003B5904 /* GroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F34C591DACCF20003B5904 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		C5F34C671DACCF20003B5904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5F34C6A1DACCF20003B5904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F34C6C1DACCF20003B5904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76B2529C7C53A013560B3B2 /* Pods-GroupChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupChat/Pods-GroupChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +42,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF6E5644CDE5E1168D1BC7E /* libPods-GroupChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37ADD246604493F3856526D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F76B2529C7C53A013560B3B2 /* Pods-GroupChat.debug.xcconfig */,
+				6243398826348452EE19C054 /* Pods-GroupChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9B53E142993992E0F39B13C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0617A51DD4ECFD653B6A65A4 /* libPods-GroupChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5F34C4C1DACCF20003B5904 = {
 			isa = PBXGroup;
 			children = (
 				C5F34C571DACCF20003B5904 /* GroupChat */,
 				C5F34C561DACCF20003B5904 /* Products */,
+				37ADD246604493F3856526D5 /* Pods */,
+				A9B53E142993992E0F39B13C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5F34C6F1DACCF20003B5904 /* Build configuration list for PBXNativeTarget "GroupChat" */;
 			buildPhases = (
+				96005079E88E566A2033FF29 /* [CP] Check Pods Manifest.lock */,
 				C5F34C511DACCF20003B5904 /* Sources */,
 				C5F34C521DACCF20003B5904 /* Frameworks */,
 				C5F34C531DACCF20003B5904 /* Resources */,
+				17B68CD78C0CD9A5DFF8D087 /* [CP] Embed Pods Frameworks */,
+				7B7C8D80035499AB261BD014 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B68CD78C0CD9A5DFF8D087 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupChat/Pods-GroupChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B7C8D80035499AB261BD014 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupChat/Pods-GroupChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96005079E88E566A2033FF29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5F34C511DACCF20003B5904 /* Sources */ = {
@@ -274,6 +349,7 @@
 		};
 		C5F34C701DACCF20003B5904 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F76B2529C7C53A013560B3B2 /* Pods-GroupChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToDoList/Info.plist;
@@ -285,6 +361,7 @@
 		};
 		C5F34C711DACCF20003B5904 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6243398826348452EE19C054 /* Pods-GroupChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToDoList/Info.plist;
