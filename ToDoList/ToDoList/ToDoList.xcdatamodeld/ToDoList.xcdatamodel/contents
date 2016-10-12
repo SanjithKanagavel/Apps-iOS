@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Customer" syncable="YES"/>
+    <entity name="Employee" syncable="YES"/>
     <entity name="Event">
         <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
+    <entity name="Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="73"/>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Customer" positionX="108" positionY="108" width="128" height="43"/>
+        <element name="Employee" positionX="133" positionY="-27" width="128" height="43"/>
     </elements>
 </model>
