@@ -21,7 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZBp-TO-I7y" userLabel="Play Btn 1">
                                 <rect key="frame" x="94" y="117" width="133" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="play1.png"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -38,6 +40,5 @@
     </scenes>
     <resources>
         <image name="play.png" width="439" height="173"/>
-        <image name="play1.png" width="320" height="188"/>
     </resources>
 </document>
