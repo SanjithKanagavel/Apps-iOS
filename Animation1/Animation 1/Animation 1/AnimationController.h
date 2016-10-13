@@ -1,16 +1,16 @@
-//////////////////////////////////////////////////////////////////////////////////////
 //
-//  UIView+AnimationKit.h
+//  AnimationController.h
+//  Animation 1
 //
-//  Created by Dalton Cherry on 3/20/14.
+//  Created by Sanjith Kanagavel on 13/10/16.
+//  Copyright © 2016 Sanjith Kanagavel. All rights reserved.
 //
-//////////////////////////////////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
 
-typedef void (^DCAnimationFinished)(void);
+@interface AnimationController : UIDynamicAnimator
 
-@interface UIView (DCAnimationKit)
+typedef void (^DCAnimationFinished)(void);
 
 ///-------------------------------
 /// @name coordinate manipulation
@@ -21,18 +21,18 @@ typedef void (^DCAnimationFinished)(void);
  @param x is the x coordinate you want to set.
  @param time is the duration of the animation.
  @param finished is called when the animation finishes
-*/
+ */
 -(void)setX:(CGFloat)x duration:(NSTimeInterval)time finished:(DCAnimationFinished)finished;
 
 /**
  set the x location you want the view to move to.
  @param x is the x coordinate you want to move to.
  @param finished is called when the animation finishes
-*/
+ */
 -(void)setX:(CGFloat)x finished:(DCAnimationFinished)finished;
 
 /**
- move the x location (e.g. the x of the view's frame is 200 and x is 50, 
+ move the x location (e.g. the x of the view's frame is 200 and x is 50,
  then the x coordinate of the view's frame will be 250).
  @param x is the offset of the x coordinate you want to move by.
  @param time is the duration of the animation.
@@ -246,4 +246,5 @@ typedef NS_ENUM(NSInteger, DCAnimationDirection) {
 -(void)removeCurrentAnimations;
 
 
+@end
 @end

@@ -1,19 +1,22 @@
-//////////////////////////////////////////////////////////////////////////////////////
 //
-//  UIView+AnimationKit.m
+//  AnimationController.m
+//  Animation 1
 //
-//  Created by Dalton Cherry on 3/20/14.
+//  Created by Sanjith Kanagavel on 13/10/16.
+//  Copyright © 2016 Sanjith Kanagavel. All rights reserved.
 //
-//////////////////////////////////////////////////////////////////////////////////////
 
-#import "UIView+DCAnimationKit.h"
+#import "AnimationController.h"
 #import <objc/runtime.h>
+
+
+
 
 @interface UIImageView (DCAnimationKit)
 @property (readwrite, nonatomic, strong, setter = dc_supAnimator:)UIDynamicAnimator *dc_supAnimator;
 @end
 
-@implementation UIView (DCAnimationKit)
+@implementation AnimationController : UIDynamicAnimator
 
 static NSTimeInterval DEFAULT_DURATION = 0.25;
 
@@ -426,5 +429,7 @@ CGFloat degreesToRadians(CGFloat degrees)
     }];
 }
 //////////////////////////////////////////////////////////////////////////////////////
+
+@end
 
 @end
