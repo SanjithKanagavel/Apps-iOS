@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "CustomCell.h"
 @import FirebaseDatabase;
 
 @interface MasterViewController ()
@@ -61,7 +62,11 @@
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity]; //Table object
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
         
-        [newManagedObject setValue:descriptionTxt.text forKey:@"header"];
+        NSDateFormatter *date  = [[NSDateFormatter alloc]init];
+        [date setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+        NSString *str = [date stringFromDate:[NSDate date]];
+        
+        [newManagedObject setValue:str forKey:@"header"];
         [newManagedObject setValue:descriptionTxt.text forKey:@"message"];
         // Save the context.
         NSError *error = nil;
@@ -69,7 +74,7 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-        [self postMessagesToFirebase:descriptionTxt.text];
+        [self postMessagesToFirebase:descriptionTxt.text timestamp:str];
         
     }]];
     
@@ -77,18 +82,12 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
--(void)postMessagesToFirebase:(NSString *) str {
+-(void)postMessagesToFirebase:(NSString *) str timestamp:(NSString *)timestamp {
    
-    NSDateFormatter *date  = [[NSDateFormatter alloc]init];
-    [date setDateFormat:@"HH:mm"];
-    NSDictionary *accountDetails = @{[date stringFromDate:[NSDate date]]: str};
-    NSDictionary *update1 = @{ @"/GroupChat/": accountDetails};
-    
+    NSDictionary *update1 = @{ [@"/Chats/" stringByAppendingString:timestamp] : str};
     [self.fdr updateChildValues:update1 withCompletionBlock:^(NSError *error, FIRDatabaseReference *ref){
         if (!error) {
             NSLog(@"Completed");
-            /*NSDictionary *update2 = @{[@"/UserAccounts/" stringByAppendingString:(key)]: accountDetails};
-             [_ref updateChildValues:update2];*/
         }
     }];
 }
@@ -108,6 +107,10 @@
 
 #pragma mark - Table View
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[self.fetchedResultsController sections] count];
 }
@@ -118,7 +121,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+   
+    [self.tableView registerClass:[CustomCell class] forCellReuseIdentifier:@"CustomCell"];
+    CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+    //if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     [self configureCell:cell withObject:object];
     return cell;
@@ -144,8 +154,9 @@
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
-    cell.textLabel.text = [[object valueForKey:@"header"] description];
+- (void)configureCell:(CustomCell *)cell withObject:(NSManagedObject *)object {
+    cell.timestamp.text = [[object valueForKey:@"header"] description];
+    cell.message.text = [[object valueForKey:@"message"] description];
     NSLog(@"Message : %@",[object valueForKey:@"message"]);
 }
 
