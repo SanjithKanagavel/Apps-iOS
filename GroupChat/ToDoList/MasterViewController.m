@@ -81,10 +81,20 @@
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
+#pragma - Firebase events
 
 -(void)postMessagesToFirebase:(NSString *) str timestamp:(NSString *)timestamp {
    
     NSDictionary *update1 = @{ [@"/Chats/" stringByAppendingString:timestamp] : str};
+    [self.fdr updateChildValues:update1 withCompletionBlock:^(NSError *error, FIRDatabaseReference *ref){
+        if (!error) {
+            NSLog(@"Completed");
+        }
+    }];
+}
+
+-(void)deleteMessagesFromFirebase:(NSString *) timestamp {
+    NSDictionary *update1 = @{ [@"/Chats/" stringByAppendingString:timestamp] : [NSNull null]};
     [self.fdr updateChildValues:update1 withCompletionBlock:^(NSError *error, FIRDatabaseReference *ref){
         if (!error) {
             NSLog(@"Completed");
@@ -141,6 +151,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        CustomCell* cell = (CustomCell*)[tableView cellForRowAtIndexPath:indexPath];
+        NSString *timestamp = cell.timestamp.text;
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
@@ -151,6 +163,8 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+        
+        [self deleteMessagesFromFirebase:timestamp];
     }
 }
 
