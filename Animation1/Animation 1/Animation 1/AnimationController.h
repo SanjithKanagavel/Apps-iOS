@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnimationController : UIDynamicAnimator
-
+@interface AnimationController : UIView
+/*
 typedef void (^DCAnimationFinished)(void);
 
 ///-------------------------------
@@ -245,6 +245,5 @@ typedef NS_ENUM(NSInteger, DCAnimationDirection) {
  */
 -(void)removeCurrentAnimations;
 
-
-@end
+*/
 @end

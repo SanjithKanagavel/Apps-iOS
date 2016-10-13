@@ -16,7 +16,7 @@
 @property (readwrite, nonatomic, strong, setter = dc_supAnimator:)UIDynamicAnimator *dc_supAnimator;
 @end
 
-@implementation AnimationController : UIDynamicAnimator
+@implementation AnimationController
 
 static NSTimeInterval DEFAULT_DURATION = 0.25;
 
@@ -429,7 +429,5 @@ CGFloat degreesToRadians(CGFloat degrees)
     }];
 }
 //////////////////////////////////////////////////////////////////////////////////////
-
-@end
 
 @end

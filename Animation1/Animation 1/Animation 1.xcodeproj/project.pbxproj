@@ -13,7 +13,8 @@
 		C53F04771DAF7C0700B05E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53F04751DAF7C0700B05E25 /* Main.storyboard */; };
 		C53F04791DAF7C0800B05E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53F04781DAF7C0800B05E25 /* Assets.xcassets */; };
 		C53F047C1DAF7C0800B05E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53F047A1DAF7C0800B05E25 /* LaunchScreen.storyboard */; };
-		C53F04851DAF7CA400B05E25 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F04841DAF7CA400B05E25 /* AnimationController.m */; };
+		C53F04871DAF9D8600B05E25 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = C53F04861DAF9D8600B05E25 /* play.png */; };
+		C53F04891DAFA99D00B05E25 /* play1.png in Resources */ = {isa = PBXBuildFile; fileRef = C53F04881DAFA99D00B05E25 /* play1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,8 @@
 		C53F04781DAF7C0800B05E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C53F047B1DAF7C0800B05E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C53F047D1DAF7C0800B05E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C53F04831DAF7CA400B05E25 /* AnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
-		C53F04841DAF7CA400B05E25 /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		C53F04861DAF9D8600B05E25 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		C53F04881DAFA99D00B05E25 /* play1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,8 @@
 		C53F046B1DAF7C0700B05E25 /* Animation 1 */ = {
 			isa = PBXGroup;
 			children = (
+				C53F04881DAFA99D00B05E25 /* play1.png */,
+				C53F04861DAF9D8600B05E25 /* play.png */,
 				C53F046F1DAF7C0700B05E25 /* AppDelegate.h */,
 				C53F04701DAF7C0700B05E25 /* AppDelegate.m */,
 				C53F04721DAF7C0700B05E25 /* ViewController.h */,
@@ -70,8 +73,6 @@
 				C53F047A1DAF7C0800B05E25 /* LaunchScreen.storyboard */,
 				C53F047D1DAF7C0800B05E25 /* Info.plist */,
 				C53F046C1DAF7C0700B05E25 /* Supporting Files */,
-				C53F04831DAF7CA400B05E25 /* AnimationController.h */,
-				C53F04841DAF7CA400B05E25 /* AnimationController.m */,
 			);
 			path = "Animation 1";
 			sourceTree = "<group>";
@@ -142,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53F047C1DAF7C0800B05E25 /* LaunchScreen.storyboard in Resources */,
+				C53F04891DAFA99D00B05E25 /* play1.png in Resources */,
+				C53F04871DAF9D8600B05E25 /* play.png in Resources */,
 				C53F04791DAF7C0800B05E25 /* Assets.xcassets in Resources */,
 				C53F04771DAF7C0700B05E25 /* Main.storyboard in Resources */,
 			);
@@ -154,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C53F04851DAF7CA400B05E25 /* AnimationController.m in Sources */,
 				C53F04741DAF7C0700B05E25 /* ViewController.m in Sources */,
 				C53F04711DAF7C0700B05E25 /* AppDelegate.m in Sources */,
 				C53F046E1DAF7C0700B05E25 /* main.m in Sources */,
