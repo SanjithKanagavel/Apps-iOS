@@ -11,7 +11,6 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *playBtn;
-@property (strong, nonatomic) IBOutlet UIButton *playBtn1;
 
 @end
 
@@ -31,9 +30,9 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self animation1];
+    //[self animation1];
     //[self animation2];
-    //[self animation3];
+    [self animation3];
 }
 
 
@@ -47,22 +46,58 @@
 
 -(void)animation2{
     
-    UIView *rectView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.playBtn1.frame.size.width, self.playBtn1.frame.size.height)];
-    rectView.layer.cornerRadius  = 20;
-    rectView.layer.borderColor = [UIColor greenColor].CGColor;
-    rectView.layer.borderWidth = 3.0f;
-    [self.playBtn1 addSubview:rectView];
+    [UIView animateWithDuration:1 delay:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.playBtn.frame =CGRectMake(self.playBtn.frame.origin.x-10,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+                self.playBtn.frame =CGRectMake(self.playBtn.frame.origin.x+30,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+        } completion:nil];
+    }];
+}
+
+
+-(void)animation3{
+    [UIView animateWithDuration:1 delay:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.playBtn.frame =CGRectMake(self.playBtn.frame.origin.x,self.playBtn.frame.origin.y-10,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+            self.playBtn.frame =CGRectMake(self.playBtn.frame.origin.x,self.playBtn.frame.origin.y+30,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+        } completion:nil];
+    }];
+}
+
+-(void) animation4 {
+
+    /*[UIView animateKeyframesWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:1 animations:^{
+            self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x-10,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:1.0 relativeDuration:1.0 animations:^{
+            self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x+20,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+        }];
     
-    self.playBtn1.transform= CGAffineTransformMakeScale(1.0, 0.9);
-    [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        self.playBtn1.transform = CGAffineTransformMakeScale(1.2,1.2);
-    } completion:nil ];
+        
+    } completion:nil];
+     */
+    /*UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    UIGravityBehavior* gravityBehavior =
+    [[UIGravityBehavior alloc] initWithItems:@[self.playBtn]];
+    [animator addBehavior:gravityBehavior];
+    
+    UICollisionBehavior* collisionBehavior =
+    [[UICollisionBehavior alloc] initWithItems:@[self.playBtn]];
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    [animator addBehavior:collisionBehavior];
+    
+    UIDynamicItemBehavior *elasticityBehavior =
+    [[UIDynamicItemBehavior alloc] initWithItems:@[self.playBtn]];
+    elasticityBehavior.elasticity = 0.7f;
+    [animator addBehavior:elasticityBehavior];*/
     
 }
 
--(void)animation3{
-    //UIButton *button = [UIButton alloc]initWithFrame:
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
