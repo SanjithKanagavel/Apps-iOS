@@ -32,8 +32,8 @@
 {
     [super viewDidAppear:animated];
     [self animation1];
-    [self animation2];
-    [self animation3];
+    //[self animation2];
+    //[self animation3];
 }
 
 
