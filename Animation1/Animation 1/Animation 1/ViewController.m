@@ -32,7 +32,8 @@
     [super viewDidAppear:animated];
     //[self animation1];
     //[self animation2];
-    [self animation3];
+    //[self animation3];
+    [self animation4];
 }
 
 
@@ -67,20 +68,14 @@
 }
 
 -(void) animation4 {
-
-    /*[UIView animateKeyframesWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        
-        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:1 animations:^{
-            self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x-10,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
-        }];
-        
-        [UIView addKeyframeWithRelativeStartTime:1.0 relativeDuration:1.0 animations:^{
-            self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x+20,self.playBtn.frame.origin.y,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
-        }];
     
-        
+    [self.playBtn setImage:[UIImage imageNamed:@"mail.png"] forState:UIControlStateHighlighted];
+    self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x,self.playBtn.frame.origin.y-10,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
+
+    [UIView animateWithDuration:1 delay:0.0 usingSpringWithDamping:1 initialSpringVelocity:1.0  options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+            self.playBtn.frame = CGRectMake(self.playBtn.frame.origin.x,self.playBtn.frame.origin.y+20,self.playBtn.frame.size.width,self.playBtn.frame.size.height);
     } completion:nil];
-     */
+    
     /*UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     UIGravityBehavior* gravityBehavior =
     [[UIGravityBehavior alloc] initWithItems:@[self.playBtn]];
