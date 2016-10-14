@@ -1,4 +1,4 @@
-# Animation 1
+# Animations Set 1
 
 Sample Project to learn about iOS basic Animations
 
