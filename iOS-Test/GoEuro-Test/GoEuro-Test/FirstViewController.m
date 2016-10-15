@@ -50,7 +50,7 @@ CGPoint wholeViewOrigintPt;
 
 double prev = 0.0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView; {
-    if(scrollView.contentOffset.y < 0) return;
+    //if(scrollView.contentOffset.y < 0) return;
     double val = scrollView.contentOffset.y;
     double adder = val-prev;
     
@@ -67,7 +67,7 @@ double prev = 0.0;
         adder = 2;
     }
     
-    if(prev > scrollView.contentOffset.y)
+    if(scrollView.contentOffset.y <= 0)
     {
         if((wholeViewOrigintPt.y)>self.wholeView.frame.origin.y+adder) {
             self.wholeView.frame = CGRectMake(self.wholeView.frame.origin.x,self.wholeView.frame.origin.y+adder,self.wholeView.frame.size.width,self.wholeView.frame.size.height);
