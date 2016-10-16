@@ -33,3 +33,10 @@ You may use the following design as a reference, however you are totally free to
 https://github.com/goeuro/iOS-Test/blob/master/expected_output.png
 
 We understand that this coding exercise is not the most important thing in life! Therefore, please don´t spend more than 2-3 hours on it and reduce the scope, if needed. :)
+
+### My Work
+
+## Animation 1 :
+
+<Img alt="Button Animation 1" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation1.gif"/>
+
