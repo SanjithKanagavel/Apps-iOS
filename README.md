@@ -35,3 +35,9 @@ Sample iOS app
 ##### Animation 2 :
 
 <Img alt="Button Animation 1" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation2.gif"/>
+
+
+#### 5. Golden Ratio 2 : 
+(iOS Clone of : https://material.uplabs.com/posts/ui-ux-golden-ratio-2)
+
+<img alt="" width="300px" src="https://assets.materialup.com/uploads/acafbeff-8e41-4afa-8ee8-def1a299c27a/preview.gif"/>
