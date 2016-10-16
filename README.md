@@ -12,5 +12,22 @@ GroupChat app built using CoreData and Firebase
 #### 3. Animation 1
 App demonstrating Button animations
 
+##### Button animation 1
+
+<Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation1.gif"/>
+
+##### Button animation 2
+
+<Img alt="Button Animation 2" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation2.gif"/>
+
+##### Button animation 3
+
+<Img alt="Button Animation 3" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation3.gif"/>
+
+
 #### 4. iOS-Test
 Sample iOS app
+
+##### Animation 1 :
+
+<Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation1.gif"/>
