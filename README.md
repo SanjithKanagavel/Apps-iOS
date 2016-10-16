@@ -40,4 +40,4 @@ Sample iOS app
 #### 5. Golden Ratio 2 : 
 (iOS Clone of : https://material.uplabs.com/posts/ui-ux-golden-ratio-2)
 
-<img alt="" width="300px" src="https://assets.materialup.com/uploads/acafbeff-8e41-4afa-8ee8-def1a299c27a/preview.gif"/>
+<img alt="" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Golden%20Ratio%202/Golden%20Ratio%202/preview%20(1).gif"/>
