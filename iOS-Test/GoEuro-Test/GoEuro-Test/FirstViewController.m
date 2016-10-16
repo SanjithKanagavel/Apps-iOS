@@ -30,6 +30,12 @@ CGPoint trainOriginPt;
 CGPoint wholeViewOrigintPt;
 CGRect mainViewRect;
 UIButton *button;
+
+UIButton *button1;
+UIButton *button2;
+UIButton *button3;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -45,22 +51,94 @@ UIButton *button;
     self.scrollView.contentSize = imageView.frame.size;
     self.scrollView.delegate = self;
     
+    
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"filter.png"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(roundButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [button setBackgroundImage:[UIImage imageNamed:@"filter.png"] forState:UIControlStateNormal];
+    [button addTarget:self
+                 action:@selector(roundButtonDidTap)
+       forControlEvents:UIControlEventTouchUpInside];
     [button setContentMode:UIViewContentModeCenter];
     CGFloat windowWidth = [[UIScreen mainScreen] bounds].size.width;
     CGFloat windowHeight = [[UIScreen mainScreen] bounds].size.height;
-    NSLog(@"%f",windowWidth-30);
-    NSLog(@"%f",windowHeight-30);
     
     button.frame = CGRectMake(windowWidth-50, windowHeight-60, 40, 40);
     button.clipsToBounds = YES;
     
     [self.view addSubview:button];
     
+    button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 setImage:[UIImage imageNamed:@"airline.png"] forState:UIControlStateNormal];
+    [button1 setContentMode:UIViewContentModeCenter];
+    
+    button1.frame = CGRectMake(windowWidth-50+20, windowHeight-60+20, 0, 0);
+    button1.clipsToBounds = YES;
+    
+    button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button2 setImage:[UIImage imageNamed:@"price.png"] forState:UIControlStateNormal];
+    [button2 setContentMode:UIViewContentModeCenter];
+    
+    button2.frame = CGRectMake(windowWidth-50+20, windowHeight-60+20, 0, 0);
+    button2.clipsToBounds = YES;
+    
+    button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button3 setImage:[UIImage imageNamed:@"timer.png"] forState:UIControlStateNormal];
+    [button3 setContentMode:UIViewContentModeCenter];
+    
+    button3.frame = CGRectMake(windowWidth-50+20, windowHeight-60+20, 0, 0);
+    button3.clipsToBounds = YES;
+    
+    [self.view addSubview:button1];
+    [self.view addSubview:button2];
+    [self.view addSubview:button3];
+    button1.alpha=0;
+    button2.alpha=0;
+    button3.alpha=0;
+    
+    button.adjustsImageWhenHighlighted = NO;
+    button1.adjustsImageWhenHighlighted = NO;
+    button2.adjustsImageWhenHighlighted = NO;
+    button3.adjustsImageWhenHighlighted = NO;
 }
--(void)roundButtonDidTap:(UIButton*)tappedButton{
+bool collapsed = true;
+
+-(void)roundButtonDidTap{
+    
+    if(collapsed) {
+        
+        [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            button.alpha=1;
+            button1.alpha = 1;
+            button2.alpha = 1;
+            button3.alpha = 1;
+            button1.frame = CGRectMake(button1.frame.origin.x - 90 , button1.frame.origin.y - 20, 40 , 40);
+            
+            button2.frame = CGRectMake(button2.frame.origin.x - 65, button2.frame.origin.y - 65, 40 , 40);
+
+            button3.frame = CGRectMake(button3.frame.origin.x - 20, button3.frame.origin.y  - 90, 40 , 40);
+            
+            [button setTransform:CGAffineTransformRotate(button.transform, M_PI/2)];
+            //[button setBackgroundImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+            
+        } completion:nil];
+    }
+    else {
+        [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            button1.frame = CGRectMake(button1.frame.origin.x + 90, button1.frame.origin.y +20, 0 , 0);
+            
+            button2.frame = CGRectMake(button2.frame.origin.x + 65, button2.frame.origin.y + 65, 0 , 0);
+            
+            button3.frame = CGRectMake(button3.frame.origin.x + 20, button3.frame.origin.y + 90, 0 , 0);
+            button1.alpha=0;
+            button2.alpha=0;
+            button3.alpha=0;
+            
+            [button setTransform:CGAffineTransformRotate(button.transform, -M_PI/2)];
+            [button setBackgroundImage:[UIImage imageNamed:@"filter.png"] forState:UIControlStateNormal];
+            
+        } completion:nil];
+
+    }
+    collapsed = !collapsed;
     
 }
 
@@ -119,6 +197,23 @@ double prev = 0.0;
         button.alpha = 0.5;
         //button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 0, 0);
     } completion:nil];
+    if(!collapsed) {
+        [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            button1.frame = CGRectMake(button1.frame.origin.x + 90, button1.frame.origin.y +20, 0 , 0);
+            
+            button2.frame = CGRectMake(button2.frame.origin.x + 65, button2.frame.origin.y + 65, 0 , 0);
+            
+            button3.frame = CGRectMake(button3.frame.origin.x + 20, button3.frame.origin.y + 90, 0 , 0);
+            button1.alpha=0;
+            button2.alpha=0;
+            button3.alpha=0;
+            
+            [button setTransform:CGAffineTransformRotate(button.transform, -M_PI/2)];
+            [button setBackgroundImage:[UIImage imageNamed:@"filter.png"] forState:UIControlStateNormal];
+            
+        } completion:nil];
+        collapsed = true;
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -127,6 +222,7 @@ double prev = 0.0;
         button.alpha = 1;
         //button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 40, 40);
     } completion:nil];
+    
 }
 
 

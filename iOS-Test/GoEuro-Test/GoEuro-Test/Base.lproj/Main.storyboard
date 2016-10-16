@@ -96,10 +96,10 @@
                                 <rect key="frame" x="0.0" y="180" width="320" height="388"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lJm-9W-Gty">
-                                        <rect key="frame" x="261" y="336" width="40" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" id="lJm-9W-Gty">
+                                        <rect key="frame" x="198" y="287" width="150" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="filter.png"/>
+                                        <state key="normal" title="Button" backgroundImage="filter.png"/>
                                     </button>
                                 </subviews>
                             </scrollView>
