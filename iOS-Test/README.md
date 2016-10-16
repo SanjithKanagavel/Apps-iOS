@@ -40,3 +40,8 @@ We understand that this coding exercise is not the most important thing in life!
 
 <Img alt="Button Animation 1" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation1.gif"/>
 
+## Animation 2 :
+
+<Img alt="Button Animation 1" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation2.gif"/>
+
+
