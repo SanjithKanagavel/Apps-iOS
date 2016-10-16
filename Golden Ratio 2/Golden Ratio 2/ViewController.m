@@ -72,7 +72,107 @@ float buttonPosY,buttonPosX;
         [view1 setBackgroundColor:[UIColor blackColor]];
         button.frame  = CGRectMake(buttonPosX, buttonPosY-20, 50, 50);
     } completion:^(BOOL finished){
+
+        /*CGPoint buttonCen = [button center];
+        NSLog(@"%f %f",buttonCen.x,buttonCen.y);
+        UIBezierPath *aPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(150, 150)
+                                                             radius:75
+                                                         startAngle:0
+                                                           endAngle:M_PI_2+M_PI_4
+                                                          clockwise:YES];
         
+        
+        CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        positionAnimation.path = aPath.CGPath;
+        positionAnimation.fillMode = kCAFillModeForwards;
+        positionAnimation.removedOnCompletion = NO;
+        positionAnimation.duration = 2.0;
+        [button.layer addAnimation:positionAnimation forKey:positionAnimation.keyPath];
+        
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.path = aPath.CGPath;
+        shapeLayer.strokeColor = [UIColor redColor].CGColor;
+        shapeLayer.lineWidth = 2.0; //etc...
+        //shapeLayer.position = CGPointMake(100, 100);
+        [self.view.layer addSublayer:shapeLayer];*/
+        
+        
+        /*CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+        [animation setDuration:2.0f];
+        [animation setRemovedOnCompletion:NO];
+        [animation setFillMode:kCAFillModeForwards];
+        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+        [animation setFromValue:[NSNumber numberWithDouble:400.0]];
+        [animation setToValue:[NSNumber numberWithDouble:0.0]];
+        [animation setRepeatCount:1.0];
+        [animation setDelegate:self];
+        [button.layer addAnimation:animation forKey:@"animatePositionY"];
+        
+        animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+         [animation setDuration:2.0f];
+         [animation setRemovedOnCompletion:NO];
+         [animation setFillMode:kCAFillModeForwards];
+         [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+         [animation setFromValue:[NSNumber numberWithDouble:300.0]];
+         [animation setToValue:[NSNumber numberWithDouble:0.0]];
+         [animation setRepeatCount:1.0];
+         [animation setDelegate:self];
+         [button.layer addAnimation:animation forKey:@"animatePositionX"];
+        
+        /*CAShapeLayer *clockWiseLayer = [[CAShapeLayer alloc] init];
+        
+        CGFloat startAngle = -M_PI_2;
+        CGFloat endAngle = M_PI + M_PI_2;
+        
+        CGFloat width = CGRectGetWidth(button.frame)/2.0f + 30;
+        CGFloat height = CGRectGetHeight(button.frame)/2.0f +50;
+        CGPoint centerPoint = CGPointMake(width, height);
+        
+        float radius = CGRectGetWidth(button.frame)/2+10;
+        
+        clockWiseLayer.path = [UIBezierPath bezierPathWithArcCenter:centerPoint
+                                                             radius:radius
+                                                         startAngle:startAngle
+                                                           endAngle:endAngle
+                                                          clockwise:YES].CGPath;
+        
+        clockWiseLayer.fillColor = [UIColor clearColor].CGColor;
+        clockWiseLayer.strokeColor = [UIColor blueColor].CGColor;
+        clockWiseLayer.borderColor = [UIColor greenColor].CGColor;
+        clockWiseLayer.backgroundColor = [UIColor redColor].CGColor;
+        
+        clockWiseLayer.strokeStart = 0.0f;
+        clockWiseLayer.strokeEnd = 0.5f;
+        
+        clockWiseLayer.lineWidth = 2.0f;
+        clockWiseLayer.borderWidth = 5.0f;
+        
+        clockWiseLayer.shouldRasterize = NO;
+        [self.view.layer addSublayer:clockWiseLayer];
+        
+        
+        
+        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+        [animation setDuration:DURATION];
+        [animation setRemovedOnCompletion:NO];
+        [animation setFillMode:kCAFillModeForwards];
+        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+        [animation setFromValue:[NSNumber numberWithDouble:400.0]];
+        [animation setToValue:[NSNumber numberWithDouble:0.0]];
+        [animation setRepeatCount:1.0];
+        [animation setDelegate:self];
+        [button.layer addAnimation:animation forKey:@"animatePositionY"];*/
+        
+        /*animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+        [animation setDuration:DURATION];
+        [animation setRemovedOnCompletion:NO];
+        [animation setFillMode:kCAFillModeForwards];
+        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+        [animation setFromValue:[NSNumber numberWithDouble:300.0]];
+        [animation setToValue:[NSNumber numberWithDouble:0.0]];
+        [animation setRepeatCount:1.0];
+        [animation setDelegate:self];
+        [button.layer addAnimation:animation forKey:@"animatePositionX"];*/
     }];
 }
 
