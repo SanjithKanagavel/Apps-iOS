@@ -14,6 +14,7 @@
 		C556F1371DB155A700C6464E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C556F1351DB155A700C6464E /* Main.storyboard */; };
 		C556F1391DB155A700C6464E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C556F1381DB155A700C6464E /* Assets.xcassets */; };
 		C556F13C1DB155A800C6464E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C556F13A1DB155A800C6464E /* LaunchScreen.storyboard */; };
+		C577811B1DB370A300DF86E2 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = C577811A1DB370A300DF86E2 /* filter.png */; };
 		C5F3D0ED1DB247FA00A25BC3 /* sampleimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C5F3D0EC1DB247FA00A25BC3 /* sampleimage.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		C556F1381DB155A700C6464E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C556F13B1DB155A800C6464E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C556F13D1DB155A800C6464E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C577811A1DB370A300DF86E2 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		C5F3D0EC1DB247FA00A25BC3 /* sampleimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleimage.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 		C556F1281DB155A700C6464E /* GoEuro-Test */ = {
 			isa = PBXGroup;
 			children = (
+				C577811A1DB370A300DF86E2 /* filter.png */,
 				C5F3D0EC1DB247FA00A25BC3 /* sampleimage.jpeg */,
 				C556F12C1DB155A700C6464E /* AppDelegate.h */,
 				C556F12D1DB155A700C6464E /* AppDelegate.m */,
@@ -146,6 +149,7 @@
 			files = (
 				C556F13C1DB155A800C6464E /* LaunchScreen.storyboard in Resources */,
 				C5F3D0ED1DB247FA00A25BC3 /* sampleimage.jpeg in Resources */,
+				C577811B1DB370A300DF86E2 /* filter.png in Resources */,
 				C556F1391DB155A700C6464E /* Assets.xcassets in Resources */,
 				C556F1371DB155A700C6464E /* Main.storyboard in Resources */,
 			);

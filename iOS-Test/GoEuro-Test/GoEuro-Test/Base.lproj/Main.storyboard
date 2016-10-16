@@ -95,6 +95,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yWk-TW-tQB">
                                 <rect key="frame" x="0.0" y="180" width="320" height="388"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lJm-9W-Gty">
+                                        <rect key="frame" x="261" y="336" width="40" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="filter.png"/>
+                                    </button>
+                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,4 +122,7 @@
             <point key="canvasLocation" x="237" y="-254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filter.png" width="96" height="96"/>
+    </resources>
 </document>
