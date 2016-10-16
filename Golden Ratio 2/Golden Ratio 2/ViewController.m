@@ -31,7 +31,16 @@ float buttonPosY,buttonPosX;
     [self.view addSubview:view2];
     buttonPosY = [[UIScreen mainScreen] bounds].size.height - ([[UIScreen mainScreen] bounds].size.height/3);
     buttonPosX = [[UIScreen mainScreen] bounds].size.width - ([[UIScreen mainScreen] bounds].size.width/3);
+    
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:view1.bounds];
+    view1.layer.masksToBounds = NO;
+    view1.layer.shadowColor = [UIColor blackColor].CGColor;
+    view1.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    view1.layer.shadowOpacity = 0.5f;
+    view1.layer.shadowPath = shadowPath.CGPath;
+    
     [self animateView1];
+    
     
     
 }
@@ -49,6 +58,7 @@ float buttonPosY,buttonPosX;
     [button setBackgroundImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
     button.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button.adjustsImageWhenHighlighted = NO;
+    
     [self.view addSubview:button];
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         view2.frame = CGRectMake(0,buttonPosY,[[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height);
@@ -59,6 +69,7 @@ float buttonPosY,buttonPosX;
 
 -(void) buttonAnimation {
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [view1 setBackgroundColor:[UIColor blackColor]];
         button.frame  = CGRectMake(buttonPosX, buttonPosY-20, 50, 50);
     } completion:^(BOOL finished){
         
