@@ -16,11 +16,20 @@
 
 UIView *view1;
 UIView *view2;
+
 UIButton *button;
+UIButton *button1; //fb
+UIButton *button2; //twitter
+UIButton *button3; //google plus
+UIButton *button4; //instagram
+UIButton *button5; //youtube
+bool collapsed;
+
 float buttonPosY,buttonPosX;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    collapsed = true;
     // Do any additional setup after loading the view, typically from a nib.
     view1 = [[UIView alloc]initWithFrame:CGRectMake(-[[UIScreen mainScreen] bounds].size.width,0,[[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height)];
     [view1 setBackgroundColor:[self colorFromHexString:@"#546E7A"]];
@@ -30,7 +39,7 @@ float buttonPosY,buttonPosX;
     [view2 setBackgroundColor:[self colorFromHexString:@"#F9A825"]];
     [self.view addSubview:view2];
     buttonPosY = [[UIScreen mainScreen] bounds].size.height - ([[UIScreen mainScreen] bounds].size.height/3);
-    buttonPosX = [[UIScreen mainScreen] bounds].size.width - ([[UIScreen mainScreen] bounds].size.width/3);
+    buttonPosX = [[UIScreen mainScreen] bounds].size.width - ([[UIScreen mainScreen] bounds].size.width/3) - 30;
     
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:view1.bounds];
     view1.layer.masksToBounds = NO;
@@ -55,11 +64,50 @@ float buttonPosY,buttonPosX;
 
 -(void) animateView2{
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setBackgroundImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
     button.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button.adjustsImageWhenHighlighted = NO;
+    [button addTarget:self action:@selector(roundButtonDidTap) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 setBackgroundImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
+    button1.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
+    button1.adjustsImageWhenHighlighted = NO;
+    button1.alpha = 0;
+    
+    button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button2 setBackgroundImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
+    button2.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
+    button2.adjustsImageWhenHighlighted = NO;
+    button2.alpha = 0;
+    
+    button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button3 setBackgroundImage:[UIImage imageNamed:@"google.png"] forState:UIControlStateNormal];
+    button3.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
+    button3.adjustsImageWhenHighlighted = NO;
+    button3.alpha = 0;
+    
+    button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button4 setBackgroundImage:[UIImage imageNamed:@"instagram.png"] forState:UIControlStateNormal];
+    button4.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
+    button4.adjustsImageWhenHighlighted = NO;
+    button4.alpha = 0;
+    
+    
+    button5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button5 setBackgroundImage:[UIImage imageNamed:@"youtube.png"] forState:UIControlStateNormal];
+    button5.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
+    button5.adjustsImageWhenHighlighted = NO;
+    button5.alpha = 0;
+    
+    [self.view addSubview:button5];
+    [self.view addSubview:button4];
+    [self.view addSubview:button3];
+    [self.view addSubview:button2];
+    [self.view addSubview:button1];
     [self.view addSubview:button];
+    
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         view2.frame = CGRectMake(0,buttonPosY,[[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height);
     } completion:^(bool finished){
@@ -67,118 +115,283 @@ float buttonPosY,buttonPosX;
     }];
 }
 
+
+-(void)roundButtonDidTap{
+    
+    if(collapsed) {
+    
+    //button.frame  = CGRectMake(button.frame.origin.x, button.frame.origin.y, 50, 50);
+    CGPoint buttonCen = [button center];
+    UIBezierPath *aPath = [UIBezierPath bezierPath];
+
+    float x = buttonCen.x;
+    float y = buttonCen.y;
+    
+    [aPath addArcWithCenter:CGPointMake(x, y)
+                     radius:25
+                 startAngle:M_PI_2
+                   endAngle:M_PI
+                  clockwise:YES];
+    
+    [aPath addArcWithCenter:CGPointMake(x+15, y)
+                     radius:40
+                 startAngle:M_PI
+                   endAngle:M_PI+M_PI_2
+                  clockwise:YES];
+    
+    
+    [aPath addArcWithCenter:CGPointMake(x+15, y+30)
+                     radius:70
+                 startAngle:M_PI+M_PI_2
+                   endAngle:0
+                  clockwise:YES];
+    
+    [aPath addArcWithCenter:CGPointMake(x-15, y+30)
+                     radius:100
+                 startAngle:0
+                   endAngle:M_PI_2
+                  clockwise:YES];
+    
+    
+    [aPath addArcWithCenter:CGPointMake(x-20, y-70)
+                     radius:200
+                 startAngle:M_PI_2
+                   endAngle:M_PI_2+(M_PI_4+M_PI_4/10)
+                  clockwise:YES];
+    
+    
+    
+    UIBezierPath *bPath = [UIBezierPath bezierPath];
+    
+    float x1 = buttonCen.x;
+    float y1 = buttonCen.y;
+    
+    [bPath addArcWithCenter:CGPointMake(x1, y1)
+                     radius:25
+                 startAngle:M_PI_2
+                   endAngle:M_PI
+                  clockwise:YES];
+    
+    [bPath addArcWithCenter:CGPointMake(x1+15, y1)
+                     radius:40
+                 startAngle:M_PI
+                   endAngle:M_PI+M_PI_2
+                  clockwise:YES];
+    
+    
+    [bPath addArcWithCenter:CGPointMake(x1+15, y1+30)
+                     radius:70
+                 startAngle:M_PI+M_PI_2
+                   endAngle:0
+                  clockwise:YES];
+    
+    [bPath addArcWithCenter:CGPointMake(x1-15, y1+30)
+                     radius:100
+                 startAngle:0
+                   endAngle:M_PI_4+(M_PI_4/2)
+                  clockwise:YES];
+    
+    [bPath addArcWithCenter:CGPointMake(x-20, y-70)
+                     radius:200
+                 startAngle:M_PI_2
+                   endAngle:M_PI_2+(M_PI_4/2+M_PI_4/10)
+                  clockwise:YES];
+    
+    bPath.lineJoinStyle = kCGLineJoinRound;
+    
+    UIBezierPath *cPath = [UIBezierPath bezierPath];
+    
+    [cPath addArcWithCenter:CGPointMake(x1, y1)
+                     radius:25
+                 startAngle:M_PI_2
+                   endAngle:M_PI
+                  clockwise:YES];
+    
+    [cPath addArcWithCenter:CGPointMake(x1+15, y1)
+                     radius:40
+                 startAngle:M_PI
+                   endAngle:M_PI+M_PI_2
+                  clockwise:YES];
+    
+    
+    [cPath addArcWithCenter:CGPointMake(x1+15, y1+30)
+                     radius:70
+                 startAngle:M_PI+M_PI_2
+                   endAngle:0
+                  clockwise:YES];
+    
+    [cPath addArcWithCenter:CGPointMake(x1-15, y1+30)
+                     radius:100
+                 startAngle:0
+                   endAngle:M_PI_4+(M_PI_4/2)
+                  clockwise:YES];
+    
+    [cPath addArcWithCenter:CGPointMake(x-20, y-70)
+                     radius:200
+                 startAngle:M_PI_2
+                   endAngle:M_PI_2+(M_PI_4/8)
+                  clockwise:YES];
+    
+    
+    cPath.lineJoinStyle = kCGLineJoinRound;
+    
+    UIBezierPath *dPath = [UIBezierPath bezierPath];
+    
+    [dPath addArcWithCenter:CGPointMake(x1, y1)
+                     radius:25
+                 startAngle:M_PI_2
+                   endAngle:M_PI
+                  clockwise:YES];
+    
+    [dPath addArcWithCenter:CGPointMake(x1+15, y1)
+                     radius:40
+                 startAngle:M_PI
+                   endAngle:M_PI+M_PI_2
+                  clockwise:YES];
+    
+    
+    [dPath addArcWithCenter:CGPointMake(x1+15, y1+30)
+                     radius:70
+                 startAngle:M_PI+M_PI_2
+                   endAngle:0
+                  clockwise:YES];
+    
+    [dPath addArcWithCenter:CGPointMake(x1-15, y1+30)
+                     radius:100
+                 startAngle:0
+                   endAngle:M_PI_4+(M_PI_4/3)
+                  clockwise:YES];
+    dPath.lineJoinStyle = kCGLineJoinRound;
+    
+    UIBezierPath *ePath = [UIBezierPath bezierPath];
+    
+    [ePath addArcWithCenter:CGPointMake(x1, y1)
+                     radius:25
+                 startAngle:M_PI_2
+                   endAngle:M_PI
+                  clockwise:YES];
+    
+    [ePath addArcWithCenter:CGPointMake(x1+15, y1)
+                     radius:40
+                 startAngle:M_PI
+                   endAngle:M_PI+M_PI_2
+                  clockwise:YES];
+    
+    
+    [ePath addArcWithCenter:CGPointMake(x1+15, y1+30)
+                     radius:70
+                 startAngle:M_PI+M_PI_2
+                   endAngle:0
+                  clockwise:YES];
+    
+    [ePath addArcWithCenter:CGPointMake(x1-15, y1+30)
+                     radius:100
+                 startAngle:0
+                   endAngle:(M_PI_4/2-M_PI_4/10)
+                  clockwise:YES];
+    
+    ePath.lineJoinStyle = kCGLineJoinRound;
+    
+    
+    CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    positionAnimation.path = aPath.CGPath;
+    positionAnimation.fillMode = kCAFillModeForwards;
+    positionAnimation.removedOnCompletion = NO;
+    positionAnimation.calculationMode = kCAAnimationPaced;
+    positionAnimation.duration = 1;
+    [button1.layer addAnimation:positionAnimation forKey:@"position"];
+    
+    
+    CAKeyframeAnimation *positionAnimation1 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    positionAnimation1.path = bPath.CGPath;
+    positionAnimation1.fillMode = kCAFillModeForwards;
+    positionAnimation1.removedOnCompletion = NO;
+    positionAnimation1.calculationMode = kCAAnimationPaced;
+    positionAnimation1.duration = 1;
+    [button2.layer addAnimation:positionAnimation1 forKey:@"position"];
+    
+    
+    CAKeyframeAnimation *positionAnimation2 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    positionAnimation2.path = cPath.CGPath;
+    positionAnimation2.fillMode = kCAFillModeForwards;
+    positionAnimation2.removedOnCompletion = NO;
+    positionAnimation2.calculationMode = kCAAnimationPaced;
+    positionAnimation2.duration = 1;
+    [button3.layer addAnimation:positionAnimation2 forKey:@"position"];
+    
+    
+    
+    CAKeyframeAnimation *positionAnimation3 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    positionAnimation3.path = dPath.CGPath;
+    positionAnimation3.fillMode = kCAFillModeForwards;
+    positionAnimation3.removedOnCompletion = NO;
+    positionAnimation3.calculationMode = kCAAnimationPaced;
+    positionAnimation3.duration = 1;
+    [button4.layer addAnimation:positionAnimation3 forKey:@"position"];
+    
+    
+    
+    CAKeyframeAnimation *positionAnimation4 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    positionAnimation4.path = ePath.CGPath;
+    positionAnimation4.fillMode = kCAFillModeForwards;
+    positionAnimation4.removedOnCompletion = NO;
+    positionAnimation4.calculationMode = kCAAnimationPaced;
+    positionAnimation4.duration = 1;
+    [button5.layer addAnimation:positionAnimation4 forKey:@"position"];
+    
+    button.alpha = 0;
+    [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        button1.alpha = 1;
+        button2.alpha = 1;
+        button3.alpha = 1;
+        button4.alpha = 1;
+        button5.alpha = 1;
+        
+        [button setBackgroundImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+        button.alpha = 1;
+    } completion:^(BOOL finished){
+    }];
+    
+    
+    }
+    else{
+        button.alpha = 0;
+        [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [button setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
+            button.alpha = 1;
+            button1.alpha = 0;
+            button2.alpha = 0;
+            button3.alpha = 0;
+            button4.alpha = 0;
+            button5.alpha = 0;
+            
+        } completion:^(BOOL finished){
+        }];
+   
+    }
+    
+    collapsed = !collapsed;
+}
+
+
 -(void) buttonAnimation {
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [view1 setBackgroundColor:[UIColor blackColor]];
         button.frame  = CGRectMake(buttonPosX, buttonPosY-20, 50, 50);
+        button1.frame  = CGRectMake(button1.frame.origin.x, button1.frame.origin.y, 50, 50);
+        button2.frame  = CGRectMake(button2.frame.origin.x, button2.frame.origin.y, 50, 50);
+        button3.frame  = CGRectMake(button3.frame.origin.x, button3.frame.origin.y, 50, 50);
+        button4.frame  = CGRectMake(button4.frame.origin.x, button4.frame.origin.y, 50, 50);
+        button5.frame  = CGRectMake(button5.frame.origin.x, button5.frame.origin.y, 50, 50);
+        
     } completion:^(BOOL finished){
 
-        /*CGPoint buttonCen = [button center];
-        NSLog(@"%f %f",buttonCen.x,buttonCen.y);
-        UIBezierPath *aPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(150, 150)
-                                                             radius:75
-                                                         startAngle:0
-                                                           endAngle:M_PI_2+M_PI_4
-                                                          clockwise:YES];
-        
-        
-        CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-        positionAnimation.path = aPath.CGPath;
-        positionAnimation.fillMode = kCAFillModeForwards;
-        positionAnimation.removedOnCompletion = NO;
-        positionAnimation.duration = 2.0;
-        [button.layer addAnimation:positionAnimation forKey:positionAnimation.keyPath];
-        
-        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-        shapeLayer.path = aPath.CGPath;
-        shapeLayer.strokeColor = [UIColor redColor].CGColor;
-        shapeLayer.lineWidth = 2.0; //etc...
-        //shapeLayer.position = CGPointMake(100, 100);
-        [self.view.layer addSublayer:shapeLayer];*/
-        
-        
-        /*CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
-        [animation setDuration:2.0f];
-        [animation setRemovedOnCompletion:NO];
-        [animation setFillMode:kCAFillModeForwards];
-        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
-        [animation setFromValue:[NSNumber numberWithDouble:400.0]];
-        [animation setToValue:[NSNumber numberWithDouble:0.0]];
-        [animation setRepeatCount:1.0];
-        [animation setDelegate:self];
-        [button.layer addAnimation:animation forKey:@"animatePositionY"];
-        
-        animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-         [animation setDuration:2.0f];
-         [animation setRemovedOnCompletion:NO];
-         [animation setFillMode:kCAFillModeForwards];
-         [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
-         [animation setFromValue:[NSNumber numberWithDouble:300.0]];
-         [animation setToValue:[NSNumber numberWithDouble:0.0]];
-         [animation setRepeatCount:1.0];
-         [animation setDelegate:self];
-         [button.layer addAnimation:animation forKey:@"animatePositionX"];
-        
-        /*CAShapeLayer *clockWiseLayer = [[CAShapeLayer alloc] init];
-        
-        CGFloat startAngle = -M_PI_2;
-        CGFloat endAngle = M_PI + M_PI_2;
-        
-        CGFloat width = CGRectGetWidth(button.frame)/2.0f + 30;
-        CGFloat height = CGRectGetHeight(button.frame)/2.0f +50;
-        CGPoint centerPoint = CGPointMake(width, height);
-        
-        float radius = CGRectGetWidth(button.frame)/2+10;
-        
-        clockWiseLayer.path = [UIBezierPath bezierPathWithArcCenter:centerPoint
-                                                             radius:radius
-                                                         startAngle:startAngle
-                                                           endAngle:endAngle
-                                                          clockwise:YES].CGPath;
-        
-        clockWiseLayer.fillColor = [UIColor clearColor].CGColor;
-        clockWiseLayer.strokeColor = [UIColor blueColor].CGColor;
-        clockWiseLayer.borderColor = [UIColor greenColor].CGColor;
-        clockWiseLayer.backgroundColor = [UIColor redColor].CGColor;
-        
-        clockWiseLayer.strokeStart = 0.0f;
-        clockWiseLayer.strokeEnd = 0.5f;
-        
-        clockWiseLayer.lineWidth = 2.0f;
-        clockWiseLayer.borderWidth = 5.0f;
-        
-        clockWiseLayer.shouldRasterize = NO;
-        [self.view.layer addSublayer:clockWiseLayer];
-        
-        
-        
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
-        [animation setDuration:DURATION];
-        [animation setRemovedOnCompletion:NO];
-        [animation setFillMode:kCAFillModeForwards];
-        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
-        [animation setFromValue:[NSNumber numberWithDouble:400.0]];
-        [animation setToValue:[NSNumber numberWithDouble:0.0]];
-        [animation setRepeatCount:1.0];
-        [animation setDelegate:self];
-        [button.layer addAnimation:animation forKey:@"animatePositionY"];*/
-        
-        /*animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-        [animation setDuration:DURATION];
-        [animation setRemovedOnCompletion:NO];
-        [animation setFillMode:kCAFillModeForwards];
-        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
-        [animation setFromValue:[NSNumber numberWithDouble:300.0]];
-        [animation setToValue:[NSNumber numberWithDouble:0.0]];
-        [animation setRepeatCount:1.0];
-        [animation setDelegate:self];
-        [button.layer addAnimation:animation forKey:@"animatePositionX"];*/
+
     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (UIColor *)colorFromHexString:(NSString *)hexString {
@@ -190,3 +403,98 @@ float buttonPosY,buttonPosX;
 }
 
 @end
+
+
+
+/*CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+ shapeLayer.path = bPath.CGPath;
+ shapeLayer.strokeColor = [UIColor redColor].CGColor;
+ shapeLayer.lineWidth = 2.0; //etc...
+ [self.view.layer addSublayer:shapeLayer];
+ */
+
+
+/*CABasicAnimation * pathAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+ pathAnimation.toValue = (__bridge id)[bPath CGPath];
+ pathAnimation.duration = 0.39f;
+ [button.layer addAnimation:pathAnimation forKey:nil];*/
+
+
+
+
+/*CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+ [animation setDuration:2.0f];
+ [animation setRemovedOnCompletion:NO];
+ [animation setFillMode:kCAFillModeForwards];
+ [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+ [animation setFromValue:[NSNumber numberWithDouble:400.0]];
+ [animation setToValue:[NSNumber numberWithDouble:0.0]];
+ [animation setRepeatCount:1.0];
+ [animation setDelegate:self];
+ [button.layer addAnimation:animation forKey:@"animatePositionY"];
+ 
+ animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+ [animation setDuration:2.0f];
+ [animation setRemovedOnCompletion:NO];
+ [animation setFillMode:kCAFillModeForwards];
+ [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+ [animation setFromValue:[NSNumber numberWithDouble:300.0]];
+ [animation setToValue:[NSNumber numberWithDouble:0.0]];
+ [animation setRepeatCount:1.0];
+ [animation setDelegate:self];
+ [button.layer addAnimation:animation forKey:@"animatePositionX"];
+ 
+ /*CAShapeLayer *clockWiseLayer = [[CAShapeLayer alloc] init];
+ 
+ CGFloat startAngle = -M_PI_2;
+ CGFloat endAngle = M_PI + M_PI_2;
+ 
+ CGFloat width = CGRectGetWidth(button.frame)/2.0f + 30;
+ CGFloat height = CGRectGetHeight(button.frame)/2.0f +50;
+ CGPoint centerPoint = CGPointMake(width, height);
+ 
+ float radius = CGRectGetWidth(button.frame)/2+10;
+ 
+ clockWiseLayer.path = [UIBezierPath bezierPathWithArcCenter:centerPoint
+ radius:radius
+ startAngle:startAngle
+ endAngle:endAngle
+ clockwise:YES].CGPath;
+ 
+ clockWiseLayer.fillColor = [UIColor clearColor].CGColor;
+ clockWiseLayer.strokeColor = [UIColor blueColor].CGColor;
+ clockWiseLayer.borderColor = [UIColor greenColor].CGColor;
+ clockWiseLayer.backgroundColor = [UIColor redColor].CGColor;
+ 
+ clockWiseLayer.strokeStart = 0.0f;
+ clockWiseLayer.strokeEnd = 0.5f;
+ 
+ clockWiseLayer.lineWidth = 2.0f;
+ clockWiseLayer.borderWidth = 5.0f;
+ 
+ clockWiseLayer.shouldRasterize = NO;
+ [self.view.layer addSublayer:clockWiseLayer];
+ 
+ 
+ 
+ CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+ [animation setDuration:DURATION];
+ [animation setRemovedOnCompletion:NO];
+ [animation setFillMode:kCAFillModeForwards];
+ [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+ [animation setFromValue:[NSNumber numberWithDouble:400.0]];
+ [animation setToValue:[NSNumber numberWithDouble:0.0]];
+ [animation setRepeatCount:1.0];
+ [animation setDelegate:self];
+ [button.layer addAnimation:animation forKey:@"animatePositionY"];*/
+
+/*animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+ [animation setDuration:DURATION];
+ [animation setRemovedOnCompletion:NO];
+ [animation setFillMode:kCAFillModeForwards];
+ [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+ [animation setFromValue:[NSNumber numberWithDouble:300.0]];
+ [animation setToValue:[NSNumber numberWithDouble:0.0]];
+ [animation setRepeatCount:1.0];
+ [animation setDelegate:self];
+ [button.layer addAnimation:animation forKey:@"animatePositionX"];*/

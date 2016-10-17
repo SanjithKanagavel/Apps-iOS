@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52F00BD1DB4A1E40040C3BF /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00B91DB4A1E40040C3BF /* facebook.png */; };
+		C52F00BE1DB4A1E40040C3BF /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00BA1DB4A1E40040C3BF /* google.png */; };
+		C52F00BF1DB4A1E40040C3BF /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00BB1DB4A1E40040C3BF /* instagram.png */; };
+		C52F00C01DB4A1E40040C3BF /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00BC1DB4A1E40040C3BF /* share.png */; };
+		C52F00C31DB4A1F10040C3BF /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C11DB4A1F10040C3BF /* twitter.png */; };
+		C52F00C41DB4A1F10040C3BF /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C21DB4A1F10040C3BF /* youtube.png */; };
+		C52F00C61DB4A7E60040C3BF /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C51DB4A7E60040C3BF /* close.png */; };
 		C57781321DB3E81B00DF86E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781311DB3E81B00DF86E2 /* main.m */; };
 		C57781351DB3E81B00DF86E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781341DB3E81B00DF86E2 /* AppDelegate.m */; };
 		C57781381DB3E81B00DF86E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781371DB3E81B00DF86E2 /* ViewController.m */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C52F00B91DB4A1E40040C3BF /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		C52F00BA1DB4A1E40040C3BF /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
+		C52F00BB1DB4A1E40040C3BF /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
+		C52F00BC1DB4A1E40040C3BF /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		C52F00C11DB4A1F10040C3BF /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		C52F00C21DB4A1F10040C3BF /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		C52F00C51DB4A7E60040C3BF /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		C577812D1DB3E81A00DF86E2 /* Golden Ratio 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Golden Ratio 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57781311DB3E81B00DF86E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C57781331DB3E81B00DF86E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +74,13 @@
 		C577812F1DB3E81B00DF86E2 /* Golden Ratio 2 */ = {
 			isa = PBXGroup;
 			children = (
+				C52F00C51DB4A7E60040C3BF /* close.png */,
+				C52F00C11DB4A1F10040C3BF /* twitter.png */,
+				C52F00C21DB4A1F10040C3BF /* youtube.png */,
+				C52F00B91DB4A1E40040C3BF /* facebook.png */,
+				C52F00BA1DB4A1E40040C3BF /* google.png */,
+				C52F00BB1DB4A1E40040C3BF /* instagram.png */,
+				C52F00BC1DB4A1E40040C3BF /* share.png */,
 				C57781471DB3F05700DF86E2 /* plus.png */,
 				C57781331DB3E81B00DF86E2 /* AppDelegate.h */,
 				C57781341DB3E81B00DF86E2 /* AppDelegate.m */,
@@ -141,8 +162,15 @@
 			files = (
 				C57781401DB3E81B00DF86E2 /* LaunchScreen.storyboard in Resources */,
 				C577813D1DB3E81B00DF86E2 /* Assets.xcassets in Resources */,
+				C52F00BD1DB4A1E40040C3BF /* facebook.png in Resources */,
+				C52F00C41DB4A1F10040C3BF /* youtube.png in Resources */,
 				C577813B1DB3E81B00DF86E2 /* Main.storyboard in Resources */,
+				C52F00C61DB4A7E60040C3BF /* close.png in Resources */,
+				C52F00BE1DB4A1E40040C3BF /* google.png in Resources */,
 				C57781481DB3F05700DF86E2 /* plus.png in Resources */,
+				C52F00C31DB4A1F10040C3BF /* twitter.png in Resources */,
+				C52F00BF1DB4A1E40040C3BF /* instagram.png in Resources */,
+				C52F00C01DB4A1E40040C3BF /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +334,7 @@
 				C57781461DB3E81B00DF86E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
