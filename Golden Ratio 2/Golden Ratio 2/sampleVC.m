@@ -43,7 +43,7 @@ UIImageView *img;
     }
     
     
-    img.frame = CGRectMake(([[UIScreen mainScreen] bounds].size.width/2-50) , [[UIScreen mainScreen] bounds].size.height/2-50, 400, 400);
+    img.frame = CGRectMake(([[UIScreen mainScreen] bounds].size.width/2-50) , [[UIScreen mainScreen] bounds].size.height/2-50, 300, 300);
     [img setCenter: CGPointMake([[UIScreen mainScreen] bounds].size.width/2, [[UIScreen mainScreen] bounds].size.height/2)];
     
     [closebutton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];

@@ -95,6 +95,7 @@ float buttonPosY,buttonPosX;
     button2.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button2.adjustsImageWhenHighlighted = NO;
     button2.alpha = 0;
+    button2.showsTouchWhenHighlighted = YES;
     [button2 addTarget:self action:@selector(twitterButtonClick) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -103,6 +104,7 @@ float buttonPosY,buttonPosX;
     button3.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button3.adjustsImageWhenHighlighted = NO;
     button3.alpha = 0;
+    button3.showsTouchWhenHighlighted = YES;
     [button3 addTarget:self action:@selector(googleButtonClick) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -111,6 +113,7 @@ float buttonPosY,buttonPosX;
     button4.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button4.adjustsImageWhenHighlighted = NO;
     button4.alpha = 0;
+    button4.showsTouchWhenHighlighted = YES;
     [button4 addTarget:self action:@selector(instagramButtonClick) forControlEvents:UIControlEventTouchUpInside];
 
     
@@ -120,6 +123,7 @@ float buttonPosY,buttonPosX;
     button5.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button5.adjustsImageWhenHighlighted = NO;
     button5.alpha = 0;
+    button5.showsTouchWhenHighlighted = YES;
     [button5 addTarget:self action:@selector(youtubeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button5];
