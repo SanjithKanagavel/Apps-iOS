@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "YPBubbleTransition.h"
+#import "sampleVC.h"
 
-@interface ViewController ()
-
+@interface ViewController ()  <UIViewControllerTransitioningDelegate>
+    @property (strong, nonatomic) YPBubbleTransition *transition;
 @end
 
 @implementation ViewController
@@ -50,7 +52,7 @@ float buttonPosY,buttonPosX;
     
     [self animateView1];
     
-    
+    self.transitioningDelegate = self;
     
 }
 
@@ -61,6 +63,15 @@ float buttonPosY,buttonPosX;
          [self animateView2];
      }];
 }
+
+-(YPBubbleTransition *)transition
+{
+    if (!_transition) {
+        _transition = [[YPBubbleTransition alloc] init];
+    }
+    return _transition;
+}
+
 
 -(void) animateView2{
     button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -74,6 +85,9 @@ float buttonPosY,buttonPosX;
     [button1 setBackgroundImage:[UIImage imageNamed:@"facebook.png"] forState:UIControlStateNormal];
     button1.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button1.adjustsImageWhenHighlighted = NO;
+    button1.showsTouchWhenHighlighted = YES;
+    [button1 addTarget:self action:@selector(facebookButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     button1.alpha = 0;
     
     button2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -81,18 +95,24 @@ float buttonPosY,buttonPosX;
     button2.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button2.adjustsImageWhenHighlighted = NO;
     button2.alpha = 0;
+    [button2 addTarget:self action:@selector(twitterButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     
     button3 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button3 setBackgroundImage:[UIImage imageNamed:@"google.png"] forState:UIControlStateNormal];
     button3.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button3.adjustsImageWhenHighlighted = NO;
     button3.alpha = 0;
+    [button3 addTarget:self action:@selector(googleButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     
     button4 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button4 setBackgroundImage:[UIImage imageNamed:@"instagram.png"] forState:UIControlStateNormal];
     button4.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button4.adjustsImageWhenHighlighted = NO;
     button4.alpha = 0;
+    [button4 addTarget:self action:@selector(instagramButtonClick) forControlEvents:UIControlEventTouchUpInside];
+
     
     
     button5 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -100,6 +120,7 @@ float buttonPosY,buttonPosX;
     button5.frame = CGRectMake(buttonPosX+25, buttonPosY-20+25, 0, 0);
     button5.adjustsImageWhenHighlighted = NO;
     button5.alpha = 0;
+    [button5 addTarget:self action:@selector(youtubeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button5];
     [self.view addSubview:button4];
@@ -113,6 +134,37 @@ float buttonPosY,buttonPosX;
     } completion:^(bool finished){
         [self buttonAnimation];
     }];
+}
+
+-(void) facebookButtonClick {
+    buttonCode = 1;
+    [self _presentWithSegueIdentifier:@"showView" animated:NO];
+}
+
+
+-(void) youtubeButtonClick
+{
+    buttonCode = 5;
+    [self _presentWithSegueIdentifier:@"showView" animated:NO];
+}
+
+-(void) instagramButtonClick
+{
+     buttonCode = 4;
+     [self _presentWithSegueIdentifier:@"showView" animated:NO];
+}
+
+-(void) googleButtonClick
+{
+    buttonCode = 3;
+    [self _presentWithSegueIdentifier:@"showView" animated:NO];
+}
+
+
+-(void) twitterButtonClick
+{
+    buttonCode = 2;
+    [self _presentWithSegueIdentifier:@"showView" animated:NO];
 }
 
 
@@ -338,6 +390,24 @@ float buttonPosY,buttonPosX;
     positionAnimation4.calculationMode = kCAAnimationPaced;
     positionAnimation4.duration = 1;
     [button5.layer addAnimation:positionAnimation4 forKey:@"position"];
+        
+        [CATransaction setCompletionBlock:^{
+            CGRect Val =[button1.layer.presentationLayer frame];
+            button1.layer.frame = CGRectMake(Val.origin.x, Val.origin.y, Val.size.width, Val.size.height);
+            
+            CGRect Val2 =[button2.layer.presentationLayer frame];
+            button2.layer.frame = CGRectMake(Val2.origin.x, Val2.origin.y, Val2.size.width, Val2.size.height);
+            
+            CGRect Val1 =[button3.layer.presentationLayer frame];
+            button3.layer.frame = CGRectMake(Val1.origin.x, Val1.origin.y, Val1.size.width, Val1.size.height);
+            
+            CGRect Val4 =[button4.layer.presentationLayer frame];
+            button4.layer.frame = CGRectMake(Val4.origin.x, Val4.origin.y, Val4.size.width, Val4.size.height);
+            
+            CGRect Val5 =[button5.layer.presentationLayer frame];
+            button5.layer.frame = CGRectMake(Val5.origin.x, Val5.origin.y, Val5.size.width, Val5.size.height);
+            
+        }];
     
     button.alpha = 0;
     [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -390,6 +460,19 @@ float buttonPosY,buttonPosX;
     }];
 }
 
+
+- (void)_presentWithSegueIdentifier:(NSString *)segueIdentifier animated:(BOOL)animated
+{
+    if (animated) {
+        [self performSegueWithIdentifier:segueIdentifier sender:nil];
+    } else {
+        [UIView performWithoutAnimation:^{
+            [self performSegueWithIdentifier:segueIdentifier sender:nil];
+        }];
+    }
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -402,9 +485,87 @@ float buttonPosY,buttonPosX;
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
 
+
+
+ #pragma mark - Navigation
+
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     
+     UIViewController *destinationViewController = segue.destinationViewController;
+     if ([[segue identifier] isEqualToString:@"showView"]) {
+        ((sampleVC *)destinationViewController).number = buttonCode;
+     }
+     
+     UIViewController *controller = segue.destinationViewController;
+     controller.transitioningDelegate = self;
+     controller.modalPresentationStyle = UIModalPresentationCustom;
+     controller.modalTransitionStyle = UIModalPresentationCustom;
+ }
+
+int buttonCode = -1;
+#pragma mark - Bubble animations
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    
+    self.transition.transitionMode = YPBubbleTransitionModePresent;
+    if(buttonCode == 1)
+    {
+        self.transition.startPoint = button1.center;
+    }
+    else if(buttonCode == 2) {
+        self.transition.startPoint = button2.center;
+    }
+    else if(buttonCode == 3) {
+        self.transition.startPoint = button3.center;
+    }
+    else if(buttonCode == 4) {
+        self.transition.startPoint = button4.center;
+    }
+    else if(buttonCode == 5) {
+        self.transition.startPoint = button5.center;
+    }
+    self.transition.bubbleColor = [self colorFromHexString:@"#FDD835"];
+    return self.transition;
+}
+
+
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    
+    self.transition.transitionMode = YPBubbleTransitionModeDismiss;
+    
+    if(buttonCode == 1)
+    {
+        self.transition.startPoint = button1.center;
+    }
+    else if(buttonCode == 2) {
+        self.transition.startPoint = button2.center;
+    }
+    else if(buttonCode == 3) {
+        self.transition.startPoint = button3.center;
+    }
+    else if(buttonCode == 4) {
+        self.transition.startPoint = button4.center;
+    }
+    else if(buttonCode == 5) {
+        self.transition.startPoint = button5.center;
+    }
+    
+    buttonCode = -1;
+    
+    self.transition.bubbleColor = [self colorFromHexString:@"#FDD835"];
+    return self.transition;
+}
+
+
+
 @end
 
 
+
+
+// Junk codes
 
 /*CAShapeLayer *shapeLayer = [CAShapeLayer layer];
  shapeLayer.path = bPath.CGPath;
@@ -412,7 +573,6 @@ float buttonPosY,buttonPosX;
  shapeLayer.lineWidth = 2.0; //etc...
  [self.view.layer addSublayer:shapeLayer];
  */
-
 
 /*CABasicAnimation * pathAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
  pathAnimation.toValue = (__bridge id)[bPath CGPath];
@@ -444,7 +604,7 @@ float buttonPosY,buttonPosX;
  [animation setDelegate:self];
  [button.layer addAnimation:animation forKey:@"animatePositionX"];
  
- /*CAShapeLayer *clockWiseLayer = [[CAShapeLayer alloc] init];
+CAShapeLayer *clockWiseLayer = [[CAShapeLayer alloc] init];
  
  CGFloat startAngle = -M_PI_2;
  CGFloat endAngle = M_PI + M_PI_2;

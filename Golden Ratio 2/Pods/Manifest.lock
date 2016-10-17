@@ -1,0 +1,12 @@
+PODS:
+  - BubbleTransition-objc (0.1.0)
+
+DEPENDENCIES:
+  - BubbleTransition-objc
+
+SPEC CHECKSUMS:
+  BubbleTransition-objc: 0b4ec87d4538ee1b1972667eda0f9422723305de
+
+PODFILE CHECKSUM: 54e7978cf42c58504e280544243e8691a58f5e55
+
+COCOAPODS: 1.1.0.rc.2

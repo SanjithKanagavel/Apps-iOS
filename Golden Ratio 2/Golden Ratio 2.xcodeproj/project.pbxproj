@@ -14,6 +14,9 @@
 		C52F00C31DB4A1F10040C3BF /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C11DB4A1F10040C3BF /* twitter.png */; };
 		C52F00C41DB4A1F10040C3BF /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C21DB4A1F10040C3BF /* youtube.png */; };
 		C52F00C61DB4A7E60040C3BF /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00C51DB4A7E60040C3BF /* close.png */; };
+		C52F00C91DB4B0400040C3BF /* sampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F00C81DB4B0400040C3BF /* sampleVC.m */; };
+		C52F00CB1DB4B0560040C3BF /* sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52F00CA1DB4B0560040C3BF /* sample.storyboard */; };
+		C52F00CD1DB4BA660040C3BF /* close1.png in Resources */ = {isa = PBXBuildFile; fileRef = C52F00CC1DB4BA660040C3BF /* close1.png */; };
 		C57781321DB3E81B00DF86E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781311DB3E81B00DF86E2 /* main.m */; };
 		C57781351DB3E81B00DF86E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781341DB3E81B00DF86E2 /* AppDelegate.m */; };
 		C57781381DB3E81B00DF86E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57781371DB3E81B00DF86E2 /* ViewController.m */; };
@@ -21,9 +24,11 @@
 		C577813D1DB3E81B00DF86E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C577813C1DB3E81B00DF86E2 /* Assets.xcassets */; };
 		C57781401DB3E81B00DF86E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C577813E1DB3E81B00DF86E2 /* LaunchScreen.storyboard */; };
 		C57781481DB3F05700DF86E2 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C57781471DB3F05700DF86E2 /* plus.png */; };
+		E8EE4745400452A332120EF8 /* libPods-Golden Ratio 2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC80DC7E912DF30DEADE6A3D /* libPods-Golden Ratio 2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F7F7819630C2DD2C1B651A2 /* Pods-Golden Ratio 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golden Ratio 2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Golden Ratio 2/Pods-Golden Ratio 2.release.xcconfig"; sourceTree = "<group>"; };
 		C52F00B91DB4A1E40040C3BF /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		C52F00BA1DB4A1E40040C3BF /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		C52F00BB1DB4A1E40040C3BF /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
@@ -31,6 +36,10 @@
 		C52F00C11DB4A1F10040C3BF /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		C52F00C21DB4A1F10040C3BF /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		C52F00C51DB4A7E60040C3BF /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		C52F00C71DB4B0400040C3BF /* sampleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleVC.h; sourceTree = "<group>"; };
+		C52F00C81DB4B0400040C3BF /* sampleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleVC.m; sourceTree = "<group>"; };
+		C52F00CA1DB4B0560040C3BF /* sample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sample.storyboard; sourceTree = "<group>"; };
+		C52F00CC1DB4BA660040C3BF /* close1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close1.png; sourceTree = "<group>"; };
 		C577812D1DB3E81A00DF86E2 /* Golden Ratio 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Golden Ratio 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57781311DB3E81B00DF86E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C57781331DB3E81B00DF86E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +51,8 @@
 		C577813F1DB3E81B00DF86E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57781411DB3E81B00DF86E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57781471DB3F05700DF86E2 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		CC80DC7E912DF30DEADE6A3D /* libPods-Golden Ratio 2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Golden Ratio 2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E148E2175ACA85411DED0A6D /* Pods-Golden Ratio 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golden Ratio 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Golden Ratio 2/Pods-Golden Ratio 2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +60,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EE4745400452A332120EF8 /* libPods-Golden Ratio 2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E53F80AEA445D7C7C2A72E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E148E2175ACA85411DED0A6D /* Pods-Golden Ratio 2.debug.xcconfig */,
+				5F7F7819630C2DD2C1B651A2 /* Pods-Golden Ratio 2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C57781241DB3E81A00DF86E2 = {
 			isa = PBXGroup;
 			children = (
 				C577812F1DB3E81B00DF86E2 /* Golden Ratio 2 */,
 				C577812E1DB3E81A00DF86E2 /* Products */,
+				4E53F80AEA445D7C7C2A72E0 /* Pods */,
+				E7EC05D22ECEE89F00A7DFC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +97,7 @@
 		C577812F1DB3E81B00DF86E2 /* Golden Ratio 2 */ = {
 			isa = PBXGroup;
 			children = (
+				C52F00CC1DB4BA660040C3BF /* close1.png */,
 				C52F00C51DB4A7E60040C3BF /* close.png */,
 				C52F00C11DB4A1F10040C3BF /* twitter.png */,
 				C52F00C21DB4A1F10040C3BF /* youtube.png */,
@@ -86,11 +110,14 @@
 				C57781341DB3E81B00DF86E2 /* AppDelegate.m */,
 				C57781361DB3E81B00DF86E2 /* ViewController.h */,
 				C57781371DB3E81B00DF86E2 /* ViewController.m */,
+				C52F00CA1DB4B0560040C3BF /* sample.storyboard */,
 				C57781391DB3E81B00DF86E2 /* Main.storyboard */,
 				C577813C1DB3E81B00DF86E2 /* Assets.xcassets */,
 				C577813E1DB3E81B00DF86E2 /* LaunchScreen.storyboard */,
 				C57781411DB3E81B00DF86E2 /* Info.plist */,
 				C57781301DB3E81B00DF86E2 /* Supporting Files */,
+				C52F00C71DB4B0400040C3BF /* sampleVC.h */,
+				C52F00C81DB4B0400040C3BF /* sampleVC.m */,
 			);
 			path = "Golden Ratio 2";
 			sourceTree = "<group>";
@@ -103,6 +130,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E7EC05D22ECEE89F00A7DFC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC80DC7E912DF30DEADE6A3D /* libPods-Golden Ratio 2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57781441DB3E81B00DF86E2 /* Build configuration list for PBXNativeTarget "Golden Ratio 2" */;
 			buildPhases = (
+				4334D78C6F85558E830D1EFC /* [CP] Check Pods Manifest.lock */,
 				C57781291DB3E81A00DF86E2 /* Sources */,
 				C577812A1DB3E81A00DF86E2 /* Frameworks */,
 				C577812B1DB3E81A00DF86E2 /* Resources */,
+				DF2B8D0EC9D39978B0FDF498 /* [CP] Embed Pods Frameworks */,
+				65CABB8553082C708FFE833E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,17 +208,68 @@
 				C57781481DB3F05700DF86E2 /* plus.png in Resources */,
 				C52F00C31DB4A1F10040C3BF /* twitter.png in Resources */,
 				C52F00BF1DB4A1E40040C3BF /* instagram.png in Resources */,
+				C52F00CD1DB4BA660040C3BF /* close1.png in Resources */,
+				C52F00CB1DB4B0560040C3BF /* sample.storyboard in Resources */,
 				C52F00C01DB4A1E40040C3BF /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4334D78C6F85558E830D1EFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65CABB8553082C708FFE833E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Golden Ratio 2/Pods-Golden Ratio 2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF2B8D0EC9D39978B0FDF498 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Golden Ratio 2/Pods-Golden Ratio 2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C57781291DB3E81A00DF86E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52F00C91DB4B0400040C3BF /* sampleVC.m in Sources */,
 				C57781381DB3E81B00DF86E2 /* ViewController.m in Sources */,
 				C57781351DB3E81B00DF86E2 /* AppDelegate.m in Sources */,
 				C57781321DB3E81B00DF86E2 /* main.m in Sources */,
@@ -295,6 +384,7 @@
 		};
 		C57781451DB3E81B00DF86E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E148E2175ACA85411DED0A6D /* Pods-Golden Ratio 2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Golden Ratio 2/Info.plist";
@@ -306,6 +396,7 @@
 		};
 		C57781461DB3E81B00DF86E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F7F7819630C2DD2C1B651A2 /* Pods-Golden Ratio 2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Golden Ratio 2/Info.plist";
