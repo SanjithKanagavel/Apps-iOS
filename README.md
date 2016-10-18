@@ -44,3 +44,13 @@ A UI/UX experience animation inspired by the Golden Ratio. Design based on the G
 (iOS version of : https://material.uplabs.com/posts/ui-ux-golden-ratio-2) 
 
 <img alt="" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Golden%20Ratio%202/Golden%20Ratio%202/finalpreview.gif"/>
+
+
+#### Gooey Effect - Spinner 
+Beautiful light effect spinner using Gooey effect
+
+(iOS Clone of https://www.uplabs.com/posts/spinner-loader-gooey-light-effect)
+
+(Work in progress)
+
+<img alt="Gooey Effect" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/GooeyEffeect-Spinner/target.gif"/>
