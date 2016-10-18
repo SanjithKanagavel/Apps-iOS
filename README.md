@@ -49,7 +49,7 @@ A UI/UX experience animation inspired by the Golden Ratio. Design based on the G
 #### 6. Gooey Effect - Spinner 
 Beautiful light effect spinner using Gooey effect
 
-(iOS Clone of https://www.uplabs.com/posts/spinner-loader-gooey-light-effect)
+(iOS version of https://www.uplabs.com/posts/spinner-loader-gooey-light-effect)
 
 (Work in progress)
 
