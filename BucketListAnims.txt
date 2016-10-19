@@ -1,0 +1,5 @@
+Cool animations to be learnt :
+
+Elastic Animations:
+https://github.com/lkzhao/ElasticTransition
+https://github.com/taglia3/ElasticTransition-ObjC

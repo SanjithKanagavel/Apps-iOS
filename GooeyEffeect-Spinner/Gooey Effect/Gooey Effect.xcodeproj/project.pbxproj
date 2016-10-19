@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F247AD5332225DF1B270A2C /* Pods_Gooey_Effect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A74B9AB34FD95BD8192BB5D /* Pods_Gooey_Effect.framework */; };
+		C52925EC1DB6408C00023A13 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C52925EB1DB6408C00023A13 /* plus.png */; };
 		C5AF5D501DB5FC3C00EBEDBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF5D4F1DB5FC3C00EBEDBA /* main.m */; };
 		C5AF5D531DB5FC3C00EBEDBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF5D521DB5FC3C00EBEDBA /* AppDelegate.m */; };
 		C5AF5D561DB5FC3C00EBEDBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF5D551DB5FC3C00EBEDBA /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DB595AF40F9A35ABF3CB157 /* Pods-Gooey Effect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooey Effect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gooey Effect/Pods-Gooey Effect.debug.xcconfig"; sourceTree = "<group>"; };
+		5A74B9AB34FD95BD8192BB5D /* Pods_Gooey_Effect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gooey_Effect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9A4BBD55E8522AEA8D0293 /* Pods-Gooey Effect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooey Effect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gooey Effect/Pods-Gooey Effect.release.xcconfig"; sourceTree = "<group>"; };
+		C52925EB1DB6408C00023A13 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		C5AF5D4B1DB5FC3B00EBEDBA /* Gooey Effect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gooey Effect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AF5D4F1DB5FC3C00EBEDBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5AF5D511DB5FC3C00EBEDBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F247AD5332225DF1B270A2C /* Pods_Gooey_Effect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1636327FE10C06D5585AE930 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DB595AF40F9A35ABF3CB157 /* Pods-Gooey Effect.debug.xcconfig */,
+				8D9A4BBD55E8522AEA8D0293 /* Pods-Gooey Effect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA522B38E7557BF81C5A27C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A74B9AB34FD95BD8192BB5D /* Pods_Gooey_Effect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5AF5D421DB5FC3B00EBEDBA = {
 			isa = PBXGroup;
 			children = (
 				C5AF5D4D1DB5FC3B00EBEDBA /* Gooey Effect */,
 				C5AF5D4C1DB5FC3B00EBEDBA /* Products */,
+				1636327FE10C06D5585AE930 /* Pods */,
+				AA522B38E7557BF81C5A27C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 		C5AF5D4D1DB5FC3B00EBEDBA /* Gooey Effect */ = {
 			isa = PBXGroup;
 			children = (
+				C52925EB1DB6408C00023A13 /* plus.png */,
 				C5AF5D511DB5FC3C00EBEDBA /* AppDelegate.h */,
 				C5AF5D521DB5FC3C00EBEDBA /* AppDelegate.m */,
 				C5AF5D541DB5FC3C00EBEDBA /* ViewController.h */,
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5AF5D621DB5FC3C00EBEDBA /* Build configuration list for PBXNativeTarget "Gooey Effect" */;
 			buildPhases = (
+				004314C87D49812816B18B49 /* [CP] Check Pods Manifest.lock */,
 				C5AF5D471DB5FC3B00EBEDBA /* Sources */,
 				C5AF5D481DB5FC3B00EBEDBA /* Frameworks */,
 				C5AF5D491DB5FC3B00EBEDBA /* Resources */,
+				E9B9A591F338AEE9382D7FD9 /* [CP] Embed Pods Frameworks */,
+				15C48714449D9520C418F15C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,10 +169,59 @@
 				C5AF5D5E1DB5FC3C00EBEDBA /* LaunchScreen.storyboard in Resources */,
 				C5AF5D5B1DB5FC3C00EBEDBA /* Assets.xcassets in Resources */,
 				C5AF5D591DB5FC3C00EBEDBA /* Main.storyboard in Resources */,
+				C52925EC1DB6408C00023A13 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		004314C87D49812816B18B49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		15C48714449D9520C418F15C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gooey Effect/Pods-Gooey Effect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B9A591F338AEE9382D7FD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gooey Effect/Pods-Gooey Effect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5AF5D471DB5FC3B00EBEDBA /* Sources */ = {
@@ -263,6 +342,7 @@
 		};
 		C5AF5D631DB5FC3C00EBEDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB595AF40F9A35ABF3CB157 /* Pods-Gooey Effect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Gooey Effect/Info.plist";
@@ -274,6 +354,7 @@
 		};
 		C5AF5D641DB5FC3C00EBEDBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D9A4BBD55E8522AEA8D0293 /* Pods-Gooey Effect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Gooey Effect/Info.plist";
@@ -302,6 +383,7 @@
 				C5AF5D641DB5FC3C00EBEDBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

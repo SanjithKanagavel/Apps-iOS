@@ -1,0 +1,6 @@
+framework module Pods_Gooey_Effect {
+  umbrella header "Pods-Gooey Effect-umbrella.h"
+
+  export *
+  module * { export * }
+}

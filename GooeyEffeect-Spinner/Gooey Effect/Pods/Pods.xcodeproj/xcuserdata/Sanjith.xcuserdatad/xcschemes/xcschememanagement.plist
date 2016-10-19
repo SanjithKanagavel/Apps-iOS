@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>LiquidLoader-LiquidLoader.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>LiquidLoader.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-Gooey Effect.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5D4F3279AE1064681743C70A5746BBE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EAD3DB630AD617BC143FF8EF89DB208</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E537A48AD8FBDC09C69B343C615A1FD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED45131C63421FAE9C0F03141C78EF71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
