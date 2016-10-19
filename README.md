@@ -1,4 +1,4 @@
-# iOS-Practice-Apps
+# iOS-Apps
 Practicing iOS Development by building small apps
 
 ### Examples
