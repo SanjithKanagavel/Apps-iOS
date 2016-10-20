@@ -12,18 +12,13 @@ GroupChat app built using CoreData and Firebase
 #### 3. Animation 1
 App demonstrating Button animations
 
-##### Button animation 1
+##### Button animations
 
-<Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation1.gif"/>
+<Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation1.gif"/> <Img alt="Button Animation 2" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation2.gif"/><Img alt="Button Animation 3" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation3.gif"/>
 
-##### Button animation 2
+##### Loading animations
 
-<Img alt="Button Animation 2" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation2.gif"/>
-
-##### Button animation 3
-
-<Img alt="Button Animation 3" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation3.gif"/>
-
+<Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation4.gif"/> <Img alt="Button Animation 2" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation5.gif"/><Img alt="Button Animation 3" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/Animation1/Animation%201/Gifs/animation6.gif"/>
 
 #### 4. iOS-Test
 Sample iOS app
