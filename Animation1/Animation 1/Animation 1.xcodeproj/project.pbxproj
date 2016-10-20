@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51C33B21DB8D8BF004C45B2 /* LoadingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51C33B11DB8D8BF004C45B2 /* LoadingController.storyboard */; };
+		C51C33B51DB8D97F004C45B2 /* LoadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51C33B41DB8D97F004C45B2 /* LoadingController.m */; };
 		C53F046E1DAF7C0700B05E25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F046D1DAF7C0700B05E25 /* main.m */; };
 		C53F04711DAF7C0700B05E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F04701DAF7C0700B05E25 /* AppDelegate.m */; };
 		C53F04741DAF7C0700B05E25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F04731DAF7C0700B05E25 /* ViewController.m */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C51C33B11DB8D8BF004C45B2 /* LoadingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadingController.storyboard; sourceTree = "<group>"; };
+		C51C33B31DB8D97F004C45B2 /* LoadingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingController.h; sourceTree = "<group>"; };
+		C51C33B41DB8D97F004C45B2 /* LoadingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingController.m; sourceTree = "<group>"; };
 		C53F04691DAF7C0700B05E25 /* Animation 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animation 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53F046D1DAF7C0700B05E25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C53F046F1DAF7C0700B05E25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 				C53F04701DAF7C0700B05E25 /* AppDelegate.m */,
 				C53F04721DAF7C0700B05E25 /* ViewController.h */,
 				C53F04731DAF7C0700B05E25 /* ViewController.m */,
+				C51C33B11DB8D8BF004C45B2 /* LoadingController.storyboard */,
+				C51C33B31DB8D97F004C45B2 /* LoadingController.h */,
+				C51C33B41DB8D97F004C45B2 /* LoadingController.m */,
 				C53F04751DAF7C0700B05E25 /* Main.storyboard */,
 				C53F04781DAF7C0800B05E25 /* Assets.xcassets */,
 				C53F047A1DAF7C0800B05E25 /* LaunchScreen.storyboard */,
@@ -150,6 +158,7 @@
 				C556F11C1DB13BDD00C6464E /* mail.png in Resources */,
 				C53F04871DAF9D8600B05E25 /* play.png in Resources */,
 				C53F04791DAF7C0800B05E25 /* Assets.xcassets in Resources */,
+				C51C33B21DB8D8BF004C45B2 /* LoadingController.storyboard in Resources */,
 				C53F04771DAF7C0700B05E25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51C33B51DB8D97F004C45B2 /* LoadingController.m in Sources */,
 				C53F04741DAF7C0700B05E25 /* ViewController.m in Sources */,
 				C53F04711DAF7C0700B05E25 /* AppDelegate.m in Sources */,
 				C53F046E1DAF7C0700B05E25 /* main.m in Sources */,

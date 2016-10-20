@@ -114,6 +114,70 @@ double SCREEN_CENTER_Y;
     [self.view addSubview:smallCircle];
     
     
+    [UIView animateKeyframesWithDuration:4 delay:0 options:0 animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle3.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle3.layer.shadowOffset = CGSizeZero;
+            circle3.layer.shadowRadius = 10;
+            circle3.layer.shadowOpacity = 1.0;*/
+            [circle3 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+            
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle4.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle4.layer.shadowOffset = CGSizeZero;
+            circle4.layer.shadowRadius = 10;
+            circle4.layer.shadowOpacity = 1.0;*/
+            [circle4 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle5.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle5.layer.shadowOffset = CGSizeZero;
+            circle5.layer.shadowRadius = 10;
+            circle5.layer.shadowOpacity = 1.0;*/
+            [circle5 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle6.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle6.layer.shadowOffset = CGSizeZero;
+            circle6.layer.shadowRadius = 10;
+            circle6.layer.shadowOpacity = 1.0;*/
+            [circle6 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle7.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle7.layer.shadowOffset = CGSizeZero;
+            circle7.layer.shadowRadius = 10;
+            circle7.layer.shadowOpacity = 1.0;*/
+            [circle7 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle8.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle8.layer.shadowOffset = CGSizeZero;
+            circle8.layer.shadowRadius = 10;
+            circle8.layer.shadowOpacity = 1.0;*/
+            [circle8 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0 animations:^{
+            /*circle1.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle1.layer.shadowOffset = CGSizeZero;
+            circle1.layer.shadowRadius = 10;
+            circle1.layer.shadowOpacity = 1.0;*/
+            [circle1 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+        [UIView addKeyframeWithRelativeStartTime:3.5 relativeDuration:0 animations:^{
+            /*circle2.layer.shadowColor = [self convertHexColor:@"#54F7FC"].CGColor;
+            circle2.layer.shadowOffset = CGSizeZero;
+            circle2.layer.shadowRadius = 10;
+            circle2.layer.shadowOpacity = 1.0;*/
+            [circle2 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        }];
+     
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
