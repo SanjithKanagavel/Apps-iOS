@@ -31,11 +31,11 @@ App demonstrating Button animations
 #### 4. iOS-Test
 Sample iOS app
 
-##### Animation 1 :
+##### Hiding Headers  :
 
 <Img alt="Button Animation 1" width="300px" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation1.gif"/>
 
-##### Animation 2 :
+##### Button animation :
 
 <Img alt="Button Animation 1" src="https://github.com/SanjithKanagavel/iOS-Practice-Apps/blob/master/iOS-Test/Gifs/animation2.gif"/>
 
