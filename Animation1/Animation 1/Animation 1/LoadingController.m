@@ -44,17 +44,27 @@ double SCREEN_CENTER_Y;
     [self.view addSubview:circle3];
     [self.view addSubview:circle2];
     [self.view addSubview:circle1];
-    [self animationSet1];
+    
+    //animation 1
+    //[self animationSet1];
+    
+    //animation 2
+    //circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y-10, circle3.frame.size.width, circle3.frame.size.height);
+    //[self animationSet2];
+    
+    //animation 3
+    //circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y-10, circle3.frame.size.width, circle3.frame.size.height);
+    //[self animationSet2];
+    
+    [self animationSet3];
 }
 
 -(void) animationSet1{
 
     [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-
         [circle1 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
         [circle2 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
         [circle3 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
-        
     } completion:^(BOOL finished){
         [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             [circle2 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
@@ -72,6 +82,94 @@ double SCREEN_CENTER_Y;
         }];
     }];
 }
+
+-(void) animationSet2{
+    
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        circle1.frame = CGRectMake(circle1.frame.origin.x, circle1.frame.origin.y-10, circle1.frame.size.width, circle1.frame.size.height);
+        circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y+10, circle3.frame.size.width, circle3.frame.size.height);
+        [circle1 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        [circle2 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+        [circle3 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            circle1.frame = CGRectMake(circle1.frame.origin.x, circle1.frame.origin.y+10, circle1.frame.size.width, circle1.frame.size.height);
+            circle2.frame = CGRectMake(circle2.frame.origin.x, circle2.frame.origin.y-10, circle2.frame.size.width, circle2.frame.size.height);
+            [circle2 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+            [circle1 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+            [circle3 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+        } completion:^(BOOL finished){
+            
+            [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                circle2.frame = CGRectMake(circle2.frame.origin.x, circle2.frame.origin.y+10, circle2.frame.size.width, circle2.frame.size.height);
+                circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y-10, circle3.frame.size.width, circle3.frame.size.height);
+                
+                [circle3 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+                [circle1 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+                [circle2 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+            } completion:^(BOOL finished){
+                [self animationSet2];
+            }];
+        }];
+    }];
+}
+
+-(void) animationSet3{
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [circle1 setAlpha:1];
+        [circle2 setAlpha:0];
+        [circle3 setAlpha:0];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [circle2 setAlpha:1];
+            [circle1 setAlpha:0];
+            [circle3 setAlpha:0];
+        } completion:^(BOOL finished){
+            
+            [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                [circle3 setAlpha:1];
+                [circle1 setAlpha:0];
+                [circle2 setAlpha:0];
+            } completion:^(BOOL finished){
+                [self animationSet3];
+            }];
+        }];
+    }];
+
+}
+
+
+-(void) animationSet4{
+    
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        circle1.frame = CGRectMake(circle1.frame.origin.x, circle1.frame.origin.y, circle1.frame.size.width, circle1.frame.size.height);
+        circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y, circle3.frame.size.width, circle3.frame.size.height);
+        [circle1 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+        [circle2 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+        [circle3 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            circle1.frame = CGRectMake(circle1.frame.origin.x, circle1.frame.origin.y+10, circle1.frame.size.width, circle1.frame.size.height);
+            circle2.frame = CGRectMake(circle2.frame.origin.x, circle2.frame.origin.y-10, circle2.frame.size.width, circle2.frame.size.height);
+            [circle2 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+            [circle1 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+            [circle3 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+        } completion:^(BOOL finished){
+            
+            [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                circle2.frame = CGRectMake(circle2.frame.origin.x, circle2.frame.origin.y+10, circle2.frame.size.width, circle2.frame.size.height);
+                circle3.frame = CGRectMake(circle3.frame.origin.x, circle3.frame.origin.y-10, circle3.frame.size.width, circle3.frame.size.height);
+                
+                [circle3 setBackgroundColor:[self convertHexColor:@"#54F7FC"]];
+                [circle1 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+                [circle2 setBackgroundColor:[self convertHexColor:@"#46B9FF"]];
+            } completion:^(BOOL finished){
+                [self animationSet2];
+            }];
+        }];
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
