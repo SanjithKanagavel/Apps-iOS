@@ -1,8 +1,6 @@
 # iOS-Apps
 Practicing iOS Development by building small apps
 
-### Examples
-
 #### 1. ToDoList
 Simple ToDoList exploring CoreData 
 
